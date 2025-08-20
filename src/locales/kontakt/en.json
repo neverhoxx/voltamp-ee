@@ -1,0 +1,18 @@
+{
+    "kontaktTitle": "Sustainable energy for your home – contact us!",
+    "kontaktSubTitle": "Fill in the form – we will send you a personalised offer.",
+    "nimi": "First and last name",
+    "email": "Email",
+    "phone": "Phone",
+    "description": "Describe your roof / project",
+    "send": "Send request",
+    "vestle": "Chat on Messenger/WhatsApp",
+    "nimiError": "Name is required",
+    "emailError1": "Email is required",
+    "emailError2": "Invalid email format",
+    "phoneError1": "Phone number is required",
+    "serverError": "Server error",
+    "ostukorv": "Add cart to form",
+    "saadetud": "Message has been sent!",
+    "laadimine": "Loading..."
+}

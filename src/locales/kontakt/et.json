@@ -1,0 +1,18 @@
+{
+    "kontaktTitle": "Jätkusuutlik energia sinu kodus – võta meiega ühendust!",
+    "kontaktSubTitle": "Täida vorm – saadame sulle personaalse pakkumise.",
+    "nimi": "Ees- ja perekonnanimi",
+    "email": "E-post",
+    "phone": "Telefon",
+    "description": "Kirjelda oma katust / projekti",
+    "send": "Saada päring",
+    "vestle": "Vestle Messengeri/WhatsAppis",
+    "nimiError": "Nimi on kohustuslik",
+    "emailError1": "Email on kohustuslik",
+    "emailError2": "Email on kohustuslik",
+    "phoneError1": "Telefon on kohustuslik",
+    "serverError": "Serveri viga",
+    "ostukorv": "Lisa ostukorv vormile",
+    "saadetud": "Sõnum on saadetud!",
+    "laadimine": "Laadimine..."
+}

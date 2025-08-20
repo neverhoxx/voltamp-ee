@@ -1,0 +1,18 @@
+{
+    "kontaktTitle": "Ilgtspējīga enerģija tavam mājoklim – sazinies ar mums!",
+    "kontaktSubTitle": "Aizpildi formu – nosūtīsim tev personalizētu piedāvājumu.",
+    "nimi": "Vārds un uzvārds",
+    "email": "E-pasts",
+    "phone": "Tālrunis",
+    "description": "Apraksti savu jumtu / projektu",
+    "send": "Nosūtīt pieprasījumu",
+    "vestle": "Tērzēt Messenger/WhatsApp",
+    "nimiError": "Vārds ir obligāts",
+    "emailError1": "E-pasts ir obligāts",
+    "emailError2": "Nepareizs e-pasta formāts",
+    "phoneError1": "Tālrunis ir obligāts",
+    "serverError": "Servera kļūda",
+    "ostukorv": "Pievienot grozu formai",
+    "saadetud": "Ziņa ir nosūtīta!",
+    "laadimine": "Lelādēšana..."
+}

@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import { Container } from '@/components/shared/container';
 
@@ -129,12 +129,12 @@ export default function ProductDetails({ params }: { params: Promise<{ slug: str
                                 }}
                                 className="flex justify-center items-center px-4 bg-[#000] text-white mx-auto py-3 rounded-[10px] cursor-pointer hover:bg-[#00BFFF] duration-500 ease-in-out select-none"
                             >
-                                <MdAddShoppingCart className="mr-3" /> Lisa ostukorvisse
+                                <MdAddShoppingCart className="mr-3" /> {product?.lisa}
                             </button>
                         )}
 
                         <ScrollLink to="toote-andmed" className="flex font-bold mt-5 text-[14px] items-center justify-center py-3 border-[#00BFFF] border-2 select-none cursor-pointer">
-                            <IoIosArrowDown className='text-def mr-3' /> Toote andmed
+                            <IoIosArrowDown className='text-def mr-3' /> {product?.tooteAndmed}
                         </ScrollLink>
                     </div>
                 </div>
@@ -173,12 +173,12 @@ export default function ProductDetails({ params }: { params: Promise<{ slug: str
                                                                 {showAll ? (
                                                                     <>
                                                                         <IoIosArrowUp className="text-def mr-2 inline-block" />
-                                                                        Näita vähem
+                                                                        {product?.naitav}
                                                                     </>
                                                                 ) : (
                                                                     <>
                                                                         <IoIosArrowDown className="text-def mr-2 inline-block" />
-                                                                        Näita rohkem
+                                                                        {product?.naitar}
                                                                     </>
                                                                 )}
                                                             </button>

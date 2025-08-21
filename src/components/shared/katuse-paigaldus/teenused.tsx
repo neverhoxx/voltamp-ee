@@ -4,8 +4,10 @@ import en from '@/locales/katuse-paigaldus/en.json';
 import lv from '@/locales/katuse-paigaldus/lv.json';
 import et from '@/locales/katuse-paigaldus/et.json';
 
-import Link from "next/link";
-import heroImg from '@/images/bgs/katusetööd-bg.jpg';
+import { MdRoofing } from "react-icons/md";
+import { MdOutlineBuildCircle } from "react-icons/md";
+import { LuReplace } from "react-icons/lu";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 interface KatusePaigaldusSectionProps {
     params: { locale: string };
@@ -16,23 +18,20 @@ export default function KatusePaigaldusSection({ params }: KatusePaigaldusSectio
     const t = locale === 'en' ? en : locale === 'lv' ? lv : et;
 
     const teenused = [
-        { num: "1", title: t[`teenusTitle1`], description: t[`teenusText1`] },
+        { num: "1", title: t[`teenusTitle1`], description: t[`teenusText1`], icon: <FaMagnifyingGlass size="40" className="mb-1 mr-2" /> },
 
-        { num: "2", title: t[`teenusTitle2`], description: t[`teenusText2`] },
+        { num: "2", title: t[`teenusTitle2`], description: t[`teenusText2`], icon: <MdOutlineBuildCircle size="40" className="mb-1 mr-2" /> },
 
-        { num: "3", title: t[`teenusTitle3`], description: t[`teenusText3`] },
+        { num: "3", title: t[`teenusTitle3`], description: t[`teenusText3`], icon: <LuReplace size="40" className="mb-1 mr-2" /> },
 
-        { num: "4", title: t[`teenusTitle4`], description: t[`teenusText4`] },
+        { num: "4", title: t[`teenusTitle4`], description: t[`teenusText4`], icon: <MdRoofing size="40" className="mb-1 mr-2" /> },
 
     ]
 
     return (
-        <section
-            className="bg-[#f5f5f5] mt-[50px] pt-[100px]"
-            style={{ clipPath: "polygon(0 5%, 100% 0%, 100% 95%, 0 100%)" }}
-        >
+        <section className="bg-[#f5f5f5] pt-[50px]">
             <Container>
-                <div className="flex justify-between pb-[85px]">
+                <div className="flex flex-wrap justify-between pb-[55px]">
                     <h2 className="text-[32px] font-bold">
                         {t[`firstBlockTitle`]} <span className="text-def">{t[`firstBlockSpan`]}</span>
                     </h2>
@@ -40,41 +39,15 @@ export default function KatusePaigaldusSection({ params }: KatusePaigaldusSectio
                         {t[`firstBlockText`]}
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 pb-25">
+                <div className="flex flex-wrap gap-10 justify-center pb-10">
                     {teenused.map((item) => (
-                        <div
-                            key={item.num}
-                            className="
-                p-6 md:p-7 rounded-2xl
-                bg-white/40 border border-white
-                shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-                backdrop-blur-[20px]
-                transition-transform duration-200 ease-in-out
-                hover:-translate-y-1 hover:shadow-[0_6px_25px_rgba(0,0,0,0.1)]
-              "
-                        >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div
-                                    className="
-                    flex items-center justify-center 
-                    rounded-full bg-[#E1DEDA] text-black font-black 
-                    w-[50px] h-[50px] text-[28px] 
-                    md:w-[71px] md:h-[71px] md:text-[40px]
-                    select-none
-                  "
-                                >
-                                    {item.num}
-                                </div>
-                                <div>
-                                    <h2 className="uppercase tracking-[6px] text-[15px] md:text-[16px] font-extralight mb-[3px]">
-                                        {t[`midaMeTeeme`]}
-                                    </h2>
-                                    <h1 className="font-black leading-[1.1] text-[20px] md:text-[clamp(24px,3vw,40px)]">
-                                        {item.title}
-                                    </h1>
-                                </div>
-                            </div>
-                            <p className="text-[16px] leading-relaxed">{item.description}</p>
+                        <div key={item.num} className="max-w-[500px] rounded-2xl bg-[#0094c5] p-5">
+                            <h3 className="text-[24px] text-white font-black adaptive-teenused">
+                                {item.icon} {item.title}
+                            </h3>
+                            <p className="opacity-75 text-white adaptive-teenused-text">
+                                {item.description}
+                            </p>
                         </div>
                     ))}
                 </div>

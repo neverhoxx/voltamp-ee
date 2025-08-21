@@ -92,7 +92,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
 
     return (
         <section
-            className="relative py-16 bg-[#0094c5] select-none"
+            className="relative  bg-[#0094c5] select-none py-[114px]"
             style={{ clipPath: "polygon(0 0, 100% 0%, 100% 95%, 0 100%)" }}
         >
             <div className="absolute inset-0 -z-10 bg-[#0094c5]" />

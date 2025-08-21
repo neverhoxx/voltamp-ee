@@ -6,8 +6,6 @@ import et from '@/locales/miks-valida/et.json';
 
 import heroImg from '@/images/bgs/meist-bg.webp';
 
-import Link from "next/link";
-
 interface MiksValidaHeroProps {
     params: { locale: string };
 }

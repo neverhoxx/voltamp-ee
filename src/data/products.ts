@@ -88,6 +88,9 @@ interface BaseProduct {
     localeDokumentatsioon: any;
     tooteAndmed: any;
     category: string;
+    lisa: string;
+    naitar: string;
+    naitav: string;
 }
 
 interface ProductWithImage extends BaseProduct {
@@ -133,6 +136,9 @@ export function getProducts(locale: Locale): Product[] {
             main_image: first_product_front,
             image: first_product_front,
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -206,6 +212,9 @@ export function getProducts(locale: Locale): Product[] {
                 second_product_6_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -285,6 +294,9 @@ export function getProducts(locale: Locale): Product[] {
                 third_product_6_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -357,6 +369,9 @@ export function getProducts(locale: Locale): Product[] {
             main_image: fourth_product_1_pic,
             image: fourth_product_1_pic,
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -419,6 +434,9 @@ export function getProducts(locale: Locale): Product[] {
             main_image: fifth_product_1_pic,
             image: fifth_product_1_pic,
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -495,6 +513,9 @@ export function getProducts(locale: Locale): Product[] {
                 sixth_product_3_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -554,6 +575,9 @@ export function getProducts(locale: Locale): Product[] {
                 seventh_product_3_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -624,6 +648,9 @@ export function getProducts(locale: Locale): Product[] {
                 eighth_product_3_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -691,6 +718,9 @@ export function getProducts(locale: Locale): Product[] {
                 ninth_product_4_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -749,6 +779,9 @@ export function getProducts(locale: Locale): Product[] {
                 tenth_product_2_pic
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -822,6 +855,9 @@ export function getProducts(locale: Locale): Product[] {
                 eleventh_product_2_pic,
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],
@@ -882,6 +918,9 @@ export function getProducts(locale: Locale): Product[] {
                 twelfth_product_2_pic,
             ],
             km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
 
             localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
             localePõhinäitajad: [t("localePõhinäitajad")],

@@ -6,7 +6,6 @@ import et from '@/locales/pildigalerii/et.json';
 
 import heroImg from '@/images/bgs/meist-bg.webp';
 
-import Link from "next/link";
 
 interface PildigaleriiHeroProps {
     params: { locale: string };

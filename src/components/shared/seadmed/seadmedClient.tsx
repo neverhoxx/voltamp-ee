@@ -32,9 +32,6 @@ export default function SeadmedClient({ locale }: SeadmedClientProps) {
             ? products
             : products.filter((p) => p.category === currentCategory);
 
-    console.log("params.locale:", locale);
-    console.log("currentLocale:", currentLocale);
-
     return (
         <div className="pt-[114px]">
             <div>

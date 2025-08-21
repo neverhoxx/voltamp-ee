@@ -28,7 +28,7 @@ export default function TäiskatuseHero({ params }: TäiskatuseHeroProps) {
             }}
         >
             <Container className="overflow-hidden pt-[114px] text-white flex flex-col justify-end min-h-screen">
-                <div className="md:w-[70%] w-full täiskatuse-hero bg-[rgba(0,0,0,0.2)] p-5 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm  rounded-2xl">
+                <div className="md:w-[70%] w-full täiskatuse-hero bg-[rgba(0,0,0,0.2)] p-5 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-2xl">
                     <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur select-none">
                         <SunMedium className="h-4 w-4" aria-hidden />
                         <span className="text-sm">{t.heroPreTitle}</span>

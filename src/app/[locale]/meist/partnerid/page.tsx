@@ -1,5 +1,5 @@
 import React from "react";
-import LehtValmisel from "@/components/shared/leht-valmisel";
+import Partnerid from "@/components/shared/meist/partnerid";
 
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];
@@ -10,7 +10,7 @@ export default function PartneridPage({ params }: { params: Promise<{ locale: st
 
     return (
         <>
-            <LehtValmisel params={{ locale }} />
+            <Partnerid params={{ locale }} />
         </>
     );
 }

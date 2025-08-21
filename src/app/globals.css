@@ -270,3 +270,15 @@ html {
 .täiskatuse-hero{
   min-height: calc(100vh - 450px);
 }
+
+@media(max-width: 1050px){
+  .adaptive-teenused{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .adaptive-teenused-text{
+    text-align: center;
+  }
+}

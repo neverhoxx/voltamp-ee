@@ -71,5 +71,8 @@
     "tk": "tk",
     "automatsedTõrkesõnumid": "Automatsed tõrkesõnumid",
     "inverteriKommunikatsiooniliidesEthernet": "Inverteri kommunikatsiooniliides ethernet",
-    "wlan": "WLAN"
+    "wlan": "WLAN",
+    "lisa": "Lisa ostukorvi",
+    "näitar": "Näita rohkem",
+    "näitav": "Näita vähem"
 }

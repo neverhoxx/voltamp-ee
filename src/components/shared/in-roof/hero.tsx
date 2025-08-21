@@ -10,7 +10,6 @@ import heroImg from '@/images/bgs/in-roof-bg.jpg';
 
 import { SunMedium } from "lucide-react";
 
-import Link from "next/link";
 
 interface InRoofHeroProps {
     params: { locale: string };

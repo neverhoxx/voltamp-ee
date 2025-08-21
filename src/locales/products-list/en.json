@@ -71,5 +71,8 @@
     "tk": "pcs",
     "automatsedTõrkesõnumid": "Automatic error messages",
     "inverteriKommunikatsiooniliidesEthernet": "Inverter communication interface Ethernet",
-    "wlan": "WLAN"
+    "wlan": "WLAN",
+    "lisa": "Add to cart",
+    "näitar": "Show more",
+    "näitav": "Show less"
 }

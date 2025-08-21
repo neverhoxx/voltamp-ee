@@ -9,8 +9,6 @@ import Bipv from '@/components/shared/bipv';
 import Footer from '@/components/shared/footer';
 import React from 'react';
 
-
-export const dynamic = "force-dynamic";
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode, params: Promise<{ locale: string }> }) {
     const { locale } = await params;
 

@@ -7,7 +7,7 @@ export function generateStaticParams() {
 
 export default function SeadmedPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = React.use(params)
-    console.log("params.locale PAGE:", locale);
+
     return <SeadmedClient locale={locale} />;
 }
 

@@ -6,7 +6,6 @@ import lv from '@/locales/seadmed/lv.json';
 import et from '@/locales/seadmed/et.json';
 
 import { FaCartShopping } from "react-icons/fa6";
-import Link from "next/link";
 
 const translations = { en, et, lv } as const;
 export type Locale = keyof typeof translations;
@@ -38,9 +37,6 @@ export default function Categories({
     const [category, setCategory] = useState<CategoryKey>(currentCategory);
 
     const categories = Object.entries(t) as [CategoryKey, any][];
-
-    console.log("params.locale:", locale);
-    console.log("currentLocale:", currentLocale);
 
     return (
         <Container>

@@ -71,5 +71,8 @@
     "tk": "gab",
     "automatsedTõrkesõnumid": "Automātiski kļūdu ziņojumi",
     "inverteriKommunikatsiooniliidesEthernet": "Invertora komunikācijas saskarne Ethernet",
-    "wlan": "WLAN"
+    "wlan": "WLAN",
+    "lisa": "Pievienot grozam",
+    "näitar": "Rādīt vairāk",
+    "näitav": "Rādīt mazāk"
 }

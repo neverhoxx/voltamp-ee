@@ -23,6 +23,13 @@ const availableLocales = ['en', 'et', 'lv'];
 
 import { HiArrowNarrowRight } from "react-icons/hi";
 
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
+
 interface HeaderProps {
     locale: string;
 }
@@ -39,7 +46,8 @@ export default function Header({ locale }: HeaderProps) {
 
     const highlightPaths = [
         "/et/tooted", "/lv/tooted", "/en/tooted",
-        "/et/kasulikku/pildigalerii/viljandimaa", "/lv/kasulikku/pildigalerii/viljandimaa", "/en/kasulikku/pildigalerii/viljandimaa"
+        "/et/kasulikku/pildigalerii/viljandimaa", "/lv/kasulikku/pildigalerii/viljandimaa", "/en/kasulikku/pildigalerii/viljandimaa",
+        "/et/meist/partnerid", "/lv/meist/partnerid", "/en/meist/partnerid"
     ];
 
     const isHighlighted = highlightPaths.some(path =>
@@ -122,7 +130,13 @@ export default function Header({ locale }: HeaderProps) {
     const isEestiKeel = currentLocale === "et";
     console.log(isEestiKeel);
 
-
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [isOpen]);
 
     return (
         <>
@@ -166,7 +180,7 @@ export default function Header({ locale }: HeaderProps) {
                     </nav>
 
                     <div className="hidden xl:flex flex-1/40 justify-end text-white">
-                        <Link href='/kontakt' className="px-[30px] py-3 bg-[#00BFFF] text-black rounded-tr-[18px] cursor-pointer transition-all duration-500 ease-in-out hover:rounded-tr-[0px] flex items-center">
+                        <Link href={`/${currentLocale}/kontakt`} className="px-[30px] py-3 bg-[#00BFFF] text-black rounded-tr-[18px] cursor-pointer transition-all duration-500 ease-in-out hover:rounded-tr-[0px] flex items-center">
                             {t[`küsi`]}
 
                             <HiArrowNarrowRight className="ml-[10px] text-[#000]" />
@@ -350,7 +364,7 @@ export default function Header({ locale }: HeaderProps) {
                                 <h3 className='text-[18.72px] font-extrabold mb-[15px]'>{t[`kontaktid`]}</h3>
                                 <ul>
                                     <li className='mb-2.5'>
-                                        <Link className='font-medium text-[16px]' href="/päikesepaneelide-seadmed">
+                                        <Link className='font-medium text-[16px]' href="https://www.facebook.com/people/Voltamp-Energy/61575306960083/">
                                             Facebook <span className='text-[#00BFFF]'>→</span>
                                         </Link>
                                     </li>
@@ -452,63 +466,140 @@ export default function Header({ locale }: HeaderProps) {
             </div>
 
             <div
-                className={`fixed top-0 left-0 w-full h-full bg-white pt-[114px] flex flex-col overflow-hidden select-none z-45
-          transform origin-top transition-transform duration-300 ease-in-out
-          ${isOpen ? 'scale-y-100' : 'scale-y-0'}
+                className={`top-0 left-0 w-full h-full bg-white pt-[100px] flex flex-col overflow-hidden select-none z-45
+          transform origin-top transition-transform duration-300 ease-in-out 
+          ${isOpen ? 'scale-y-100 relative' : 'scale-y-0 fixed'}
         `}
             >
-                <nav className="flex flex-col items-center justify-center flex-1">
-                    <ul className="flex flex-col gap-3 text-base font-medium">
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Standardpaneeli süsteemid
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Integreeritav päikesekatus
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Seadmed
-                            </Link>
-                        </li>
-                        <li>
-                            <Link href={`/${currentLocale}/katuse-paigaldus/silekivi`} className="text-black hover:text-yellow-400 cursor-pointer">Päikeseparkide kontroll ja hooldus</Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Kasulikku
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Tehtud tööd
+                <nav className="flex flex-col flex-1 px-3">
+                    <Accordion
+                        type="single"
+                        collapsible
+                        className="w-full"
 
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Meist
+                    >
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`integreeritav`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}>
+                                            {t[`täiskatuse`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className=''>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/integreeritav-paikesekatus/in-roof-susteem`}>
+                                            <span className={`${isEestiKeel ? "italic" : "regular"} `}>{t[`inroof`]}</span> {t[`inroofsüst`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
 
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Katusetööd
-                            </Link>
-                        </li>
-                        <li>
-                            <Link className="text-black hover:text-yellow-400" href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
-                                Katuse paigaldus
-                            </Link>
-                        </li>
-                    </ul>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`seadmed`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className=''>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/tooted/seadmed`}>
+                                            {t[`seadmed`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`standardpaneeli`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/trapetsprofiilplekile`}>
+                                            {t[`trapetsprofiilplekile`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/valtsplekile`}>
+                                            {t[`valtsplekile`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/kivikatusele`}>
+                                            {t[`kivikatusele`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/lamekatustele`}>
+                                            {t[`lamekatustele`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/maapargile`}>
+                                            {t[`maapark`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`tehtud`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className=''>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/kasulikku/pildigalerii`}>
+                                            {t[`galerii`]} <span className='text-def'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-5">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`paigaldus`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className=''>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus`}>
+                                            {t[`uuri`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-6">
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`meist`]}</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4 text-balance">
+                                <ul className="font-bold">
+                                    <li className='mb-1'>
+                                        <Link
+                                            className="font-medium text-[14px]"
+                                            href={`/${currentLocale}/meist`}
+                                        >
+                                            {t["loe"]} <span className="text-[#00BFFF]">→</span>
+                                        </Link>
+
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/meist/partnerid`}>
+                                            {t[`partnerid`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/meist/meeskond`}>
+                                            {t[`team`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                </ul>
+
+                            </AccordionContent>
+                        </AccordionItem>
+
+                    </ Accordion>
                 </nav>
 
 
-                <div className="w-full flex justify-center items-center gap-5 p-4 border-t border-gray-300 select-text">
+                <div className="absolute bottom-0 w-full flex justify-center items-center gap-5 p-4 border-t bg-white border-gray-300 select-text">
                     <Link className="text-black hover:text-blue-600" href="https://www.facebook.com/share/19VfGPjeYt/">
                         Facebook
                     </Link>

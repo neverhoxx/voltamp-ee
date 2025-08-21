@@ -21,12 +21,12 @@ export default function KatusePaigaldusHero({ params }: KatusePaigaldusHeroProps
                 backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url(${heroImg.src})`
             }}
         >
-            <Container className="flex flex-col justify-center min-h-screen pt-[114px]">
-                <h1 className="text-white font-bold text-[30px] sm:text-[32px] mb-5 max-w-[710px]">
+            <Container className="flex flex-col justify-end md:justify-center min-h-screen pt-[114px]">
+                <h1 className="text-white font-bold text-[24px] md:text-[30px] sm:text-[32px] mb-5 max-w-[710px]">
                     Voltamp <span className="text-def">{t[`heroTitle`]}</span>
                 </h1>
 
-                <p className="text-white text-[16px] font-medium max-w-[710px]">
+                <p className="text-white text-[14px] md:text-[16px] font-medium max-w-[710px] mb-4">
                     {t[`heroText`]}
                 </p>
             </Container>

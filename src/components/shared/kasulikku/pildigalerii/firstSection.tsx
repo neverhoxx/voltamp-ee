@@ -6,16 +6,7 @@ import en from '@/locales/pildigalerii/en.json';
 import lv from '@/locales/pildigalerii/lv.json';
 import et from '@/locales/pildigalerii/et.json';
 
-import heroImg from '@/images/bgs/meist-bg.webp';
-import test1 from '@/images/bgs/meist-bg.webp';
-import test2 from '@/images/bgs/meist-bg.webp';
-import test3 from '@/images/bgs/meist-bg.webp';
-
-
 import Link from "next/link";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";

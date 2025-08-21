@@ -37,7 +37,6 @@ export default function Faq({ params }: FaqProps) {
                     type="single"
                     collapsible
                     className="w-full"
-                    defaultValue="item-1"
                 >
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="text-def font-black text-[20px] cursor-pointer">Mis on ehitisintegreeritav päikesekatuse süsteem?</AccordionTrigger>

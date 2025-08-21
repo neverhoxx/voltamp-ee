@@ -43,7 +43,6 @@ export default function Bipv({ params }: BipvProps) {
                     type="single"
                     collapsible
                     className="w-full"
-                    defaultValue="item-1"
                 >
                     <AccordionItem value="item-1">
                         <AccordionTrigger className="text-def font-black sm:text-[20px] text-[16px] cursor-pointer py-5">Päikesepaneelide ja ehitisintegreeritud energiasüsteemide puhul on hinnad liiga kõrged ning nende tasuvus ei ole põhjendatud.</AccordionTrigger>

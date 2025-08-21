@@ -1,15 +1,26 @@
 "use client";
-
-import { useEffect } from "react";
+import { Component, ErrorInfo, ReactNode } from "react";
 import { useRouter } from "next/navigation";
 
-export default function GlobalError({ error }: { error: Error & { digest?: string } }) {
-    const router = useRouter();
+interface Props { children: ReactNode }
 
-    useEffect(() => {
-        console.error("500 Error:", error);
-        router.replace("/et");
-    }, [error, router]);
+interface State { hasError: boolean }
 
-    return null;
+export class ClientErrorBoundary extends Component<Props, State> {
+    state = { hasError: false };
+    router = useRouter();
+
+    static getDerivedStateFromError() {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error: Error, info: ErrorInfo) {
+        console.error(error, info);
+        this.router.replace("/et");
+    }
+
+    render() {
+        if (this.state.hasError) return null;
+        return this.props.children;
+    }
 }

@@ -20,7 +20,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/integreeritav-päikesekatus',
+        source: '/integreeritav-p%C3%A4ikesekatus',
         destination: '/et/integreeritav-paikesekatus/taiskatuse-susteem',
         permanent: true,
       },

@@ -2,6 +2,7 @@ import React from "react";
 
 import TäiskatuseHero from "@/components/shared/täiskatuse/hero";
 
+
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];
 }

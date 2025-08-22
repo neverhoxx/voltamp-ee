@@ -1,6 +1,6 @@
 import solaxLogo from "@/images/logos/solax-logo.webp";
-import huaweiLogo from "@/images/logos/huaweiLogo.avif";
-import tigoLogo from "@/images/logos/tigo-logo.avif";
+import huaweiLogo from "@/images/logos/huaweiLogo.png";
+import tigoLogo from "@/images/logos/tigologo.png";
 import first_product_front from "@/images/products/solax/X3-ULTRA 15-30kW front.webp";
 import lisa_pilt_first_product_left from "@/images/products/solax/X3-ULTRA 15-30kW left.webp";
 import lisa_pilt_first_product_right from "@/images/products/solax/X3-ULTRA 15-30kW right.webp";
@@ -34,22 +34,22 @@ import fourth_product_1_pic from "@/images/products/solax/PV ARVESTI SOLAX 3F VO
 
 import fifth_product_1_pic from "@/images/products/huawei/PV INVERTER 3F SUN2000-3KTL M1 HUAWEI pilt1.png";
 
-import sixth_product_1_pic from "@/images/products/huawei/PV INVERTER 3F SUN 2000-12K-MAP0 13,2kW HUAWEI 1 pilt.avif";
+import sixth_product_1_pic from "@/images/products/huawei/PV INVERTER 3F SUN 2000-12K-MAP0 13,2kW HUAWEI 1 pilt.webp";
 import sixth_product_2_pic from "@/images/products/huawei/PV INVERTER 3F SUN 2000-12K-MAP0 13,2kW HUAWEI pilt 2.png";
 import sixth_product_3_pic from "@/images/products/huawei/PV INVERTER 3F SUN 2000-12K-MAP0 13,2kW HUAWEI pilt 3.png";
 
-import seventh_product_1_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt1.avif";
-import seventh_product_2_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt2.avif";
-import seventh_product_3_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt3.avif";
+import seventh_product_1_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt1.webp";
+import seventh_product_2_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt2.webp";
+import seventh_product_3_pic from "@/images/products/huawei/PV AKUMOODUL LUNA2000-7-E1 7kWh AKU HUAWEI pilt3.webp";
 
-import eighth_product_1_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt1.avif";
-import eighth_product_2_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt2.avif";
-import eighth_product_3_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt3.avif";
+import eighth_product_1_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt1.webp";
+import eighth_product_2_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt2.webp";
+import eighth_product_3_pic from "@/images/products/huawei/PV KONTROLLMOODUL LUNA2000-10KW-C1 10kW HUAWEI pilt3.webp";
 
-import ninth_product_1_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt1.avif";
-import ninth_product_2_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt2.avif";
-import ninth_product_3_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt3.avif";
-import ninth_product_4_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt4.avif";
+import ninth_product_1_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt1.webp";
+import ninth_product_2_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt2.webp";
+import ninth_product_3_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt3.webp";
+import ninth_product_4_pic from "@/images/products/huawei/PV KONTROLLER EMMA-A02 HUAWEI pilt4.webp";
 
 import tenth_product_1_pic from "@/images/products/tigo/PV OPTIMEERIJA TIGO TS4-A-O MC4 15A 700W pilt1.avif";
 import tenth_product_2_pic from "@/images/products/tigo/PV OPTIMEERIJA TIGO TS4-A-O MC4 15A 700W pilt2.avif";

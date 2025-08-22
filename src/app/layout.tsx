@@ -3,15 +3,13 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
-import { NextSeo } from 'next-seo';
-
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Voltamp",
+  title: "Voltamp – Päikesepaneelid ja energialahendused | Usaldusväärne partner Eestis",
   description: "Voltamp - Päikesekatused, päikesepaneelid, päikesepaneeli seadmed ja katuse paigaldus",
   keywords: ["päikesekatused", "päikesepaneelid", "energiasüsteemid", "taastuvenergia", "Eesti", "Voltamp"],
   openGraph: {

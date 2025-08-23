@@ -1,5 +1,5 @@
 import solaxLogo from "@/images/logos/solax-logo.webp";
-import huaweiLogo from "@/images/logos/huaweiLogo.png";
+import huaweiLogo from "@/images/logos/huaweilogo.png";
 import tigoLogo from "@/images/logos/tigologo.png";
 import first_product_front from "@/images/products/solax/X3-ULTRA 15-30kW front.webp";
 import lisa_pilt_first_product_left from "@/images/products/solax/X3-ULTRA 15-30kW left.webp";

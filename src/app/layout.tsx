@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   description: "Voltamp - Päikesekatused, päikesepaneelid, päikesepaneeli seadmed ja katuse paigaldus",
   keywords: ["päikesekatused", "päikesepaneelid", "energiasüsteemid", "taastuvenergia", "Eesti", "Voltamp"],
   openGraph: {
-    title: "Voltamp – Päikesекатусед, päikesепанеелиd ja energialahendused",
-    description: "Avasta Voltampi päikesепанеелиde seadmed ja energialahendused. Täielik süsteемide valик koos paigalduse ja tehnilise toega.",
+    title: "Voltamp – Päikesekatused, päikesepaneelid ja energialahendused",
+    description: "Avasta Voltampi päikesepaneelide seadmed ja energialahendused. Täielik süsteеmide valik koos paigalduse ja tehnilise toega.",
     url: "https://voltamp.ee",
     siteName: "Voltamp",
     images: [

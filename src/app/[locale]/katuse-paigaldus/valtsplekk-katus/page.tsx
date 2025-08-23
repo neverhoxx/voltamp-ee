@@ -1,5 +1,8 @@
 import React from "react";
-import LehtValmisel from "@/components/shared/leht-valmisel";
+
+import ValtsplekkKatusHero from "@/components/shared/katuse-paigaldus/valtsplekk/hero";
+import ValtsplekkKatusFirstBlock from "@/components/shared/katuse-paigaldus/valtsplekk/firstBlock";
+import ValtsplekkKatusSecondBlock from "@/components/shared/katuse-paigaldus/valtsplekk/secondBlock";
 
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];
@@ -10,7 +13,9 @@ export default function ValtsPlekkPage({ params }: { params: Promise<{ locale: s
 
     return (
         <>
-            <LehtValmisel params={{ locale }} />
+            <ValtsplekkKatusHero params={{ locale }} />
+            <ValtsplekkKatusFirstBlock params={{ locale }} />
+            <ValtsplekkKatusSecondBlock params={{ locale }} />
         </>
     );
 }

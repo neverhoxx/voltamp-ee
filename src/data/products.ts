@@ -67,6 +67,7 @@ import lv from "@/locales/products-list/lv.json";
 type Locale = "et" | "en" | "lv";
 type Translations = Record<string, string>;
 
+
 interface BaseProduct {
     id: number;
     name: string;

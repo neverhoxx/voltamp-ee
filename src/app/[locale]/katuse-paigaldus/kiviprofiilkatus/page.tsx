@@ -1,14 +1,14 @@
 import React from "react";
 
 import KiviprofiilkatusPageHero from "@/components/shared/katuse-paigaldus/kiviprofiil/hero";
-import KiviprofiilkatusFirstBlock from "@/components/shared/katuse-paigaldus/kiviprofiil/firstBlock";
-import KiviprofiilkatusSecondBlock from "@/components/shared/katuse-paigaldus/kiviprofiil/secondBlock";
+import KiviprofiilkatusFirstBlock from "@/components/shared/katuse-paigaldus/eterniit/firstBlock";
+import KiviprofiilkatusSecondBlock from "@/components/shared/katuse-paigaldus/eterniit/secondBlock";
 
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];
 }
 
-export default function KiviprofiilPage({ params }: { params: Promise<{ locale: string }> }) {
+export default function KiviprofiilKatusPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = React.use(params)
 
     return (

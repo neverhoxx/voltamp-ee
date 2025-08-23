@@ -1,8 +1,8 @@
 import { Container } from "./container";
 
-import en from '@/locales/popular-products/en.json';
-import lv from '@/locales/popular-products/lv.json';
-import et from '@/locales/popular-products/et.json';
+import en from '@/locales/header/en.json';
+import lv from '@/locales/header/lv.json';
+import et from '@/locales/header/et.json';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -32,7 +32,7 @@ export default function Footer({ params }: FooterProps) {
                         <Image className="max-w-[256px] max-h-[68px]" src={logo} alt="Voltamp - Logo" />
                     </Link>
                     <h2 className="font-bold mt-2 text-[22px]">
-                        Energia, mis võid usaldada
+                        {t[`footerTitle`]}
                     </h2>
                 </div>
 
@@ -41,22 +41,22 @@ export default function Footer({ params }: FooterProps) {
                 sm:w-auto sm:max-w-none sm:h-full sm:max-h-[200px]">
 
                         <h3 className="text-[22px] text-def select-none font-bold">
-                            Tooted
+                            {t[`nav.tooted`]}
                         </h3>
                         <ul className="mt-1">
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/tooted/seadmed`}>
-                                    Seadmed <span className='text-[#00BFFF]'>→</span>
+                                    {t[`seadmed`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link className="font-semibold" href={`/${currentLocale}/standardpaneeli-susteemid/`}>
-                                    Standardpaneeli süsteemid <span className='text-[#00BFFF]'>→</span>
+                                <Link className="font-semibold" href={`/${currentLocale}/standardpaneeli-susteem/viilkatustele/trapetsprofiilplekile`}>
+                                    {t[`standardpaneeli`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link className="font-semibold" href={`/${currentLocale}/integreeritav-paikesekatus`}>
-                                    Integreeritav päikesekatus <span className='text-[#00BFFF]'>→</span>
+                                <Link className="font-semibold" href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}>
+                                    {t[`integreeritav`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                         </ul>
@@ -64,22 +64,22 @@ export default function Footer({ params }: FooterProps) {
                     <div className="border-l-2 px-10 max-w-[300px] w-full 
                 sm:w-auto sm:max-w-none sm:h-full sm:max-h-[200px]">
                         <h3 className="text-[22px] text-def select-none font-bold">
-                            Kasulikku
+                            {t[`nav.kasulikku`]}
                         </h3>
                         <ul className="mt-1">
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/kasulikku/pildigalerii`}>
-                                    Tehtud tööd <span className='text-[#00BFFF]'>→</span>
+                                    {t[`tehtud`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus`}>
-                                    Katuse paigaldus <span className='text-[#00BFFF]'>→</span>
+                                    {t[`uuri`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/kasulikku/artiklid`}>
-                                    Artiklid <span className='text-[#00BFFF]'>→</span>
+                                    {t[`artiklid`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                         </ul>
@@ -87,27 +87,27 @@ export default function Footer({ params }: FooterProps) {
                     <div className="border-l-2 px-10 max-w-[300px] w-full 
                 sm:w-auto sm:max-w-none sm:h-full sm:max-h-[200px]">
                         <h3 className="text-[22px] text-def select-none font-bold">
-                            Meist
+                            {t[`nav.meist`]}
                         </h3>
                         <ul className="mt-1">
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/meist`}>
-                                    Loe meist <span className='text-[#00BFFF]'>→</span>
+                                    {t[`loe`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/meist/partnerid`}>
-                                    Meie partnerid <span className='text-[#00BFFF]'>→</span>
+                                    {t[`partnerid`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link className="font-semibold" href={`/${currentLocale}/meist/kontaktid`}>
-                                    Meie kontaktid <span className='text-[#00BFFF]'>→</span>
+                                <Link className="font-semibold" href={`/${currentLocale}/meist/meeskond`}>
+                                    {t[`team`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/kontakt`}>
-                                    Võta ühendust <span className='text-[#00BFFF]'>→</span>
+                                    {t[`võta`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                         </ul>
@@ -115,32 +115,32 @@ export default function Footer({ params }: FooterProps) {
                     <div className="border-l-2 px-10 max-w-[300px] w-full 
                 sm:w-auto sm:max-w-none sm:h-full sm:max-h-[200px]">
                         <h3 className="text-[22px] text-def select-none font-bold">
-                            Teenused
+                            {t[`nav.teenused`]}
                         </h3>
                         <ul className="mt-1">
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/teenused/paikeseparkide-kontroll-ja-hooldus`}>
-                                    Päikeseparkide kontroll ja hooldus <span className='text-[#00BFFF]'>→</span>
+                                    {t[`kontroll`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus`}>
-                                    Katuse paigaldus <span className='text-[#00BFFF]'>→</span>
+                                    {t[`paigaldus`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus/plekk-katused`}>
-                                    Plekk katused <span className='text-[#00BFFF]'>→</span>
+                                <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus/trapetsprofiilkatus`}>
+                                    {t[`trapetsprofiilkatus`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus/eterniit-katused`}>
-                                    Eterniit katus <span className='text-[#00BFFF]'>→</span>
+                                <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus/eterniit-katus`}>
+                                    {t[`eterniit`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link className="font-semibold" href={`/${currentLocale}/katuse-paigaldus/kivikatus`}>
-                                    Kivikatus <span className='text-[#00BFFF]'>→</span>
+                                    {t[`silekivi`]} <span className='text-[#00BFFF]'>→</span>
                                 </Link>
                             </li>
                         </ul>
@@ -157,7 +157,7 @@ export default function Footer({ params }: FooterProps) {
                     </div>
 
                     <div className="">
-                        <h1 className="font-bold">Adress</h1>
+                        <h1 className="font-bold">Aadress</h1>
                         <h3 className="mt-2 text-[16px] font-semibold">Viljandi, Eesti</h3>
                     </div>
                 </Container>

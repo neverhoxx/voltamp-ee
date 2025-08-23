@@ -4,15 +4,15 @@ import en from '@/locales/katuse-paigaldus/en.json';
 import lv from '@/locales/katuse-paigaldus/lv.json';
 import et from '@/locales/katuse-paigaldus/et.json';
 
-import heroImg from '@/images/bgs/kiviprofiil-bg.jpg';
+import heroImg from '@/images/bgs/eterniit-bg.jpg';
 
 import { MdOutlineRoofing } from "react-icons/md";
 
-interface KiviprofiilkatusPageHeroProps {
+interface EterniitKatusPageHeroProps {
     params: { locale: string };
 }
 
-export default function KiviprofiilkatusPageHero({ params }: KiviprofiilkatusPageHeroProps) {
+export default function EterniitKatusPageHero({ params }: EterniitKatusPageHeroProps) {
     const { locale } = params;
     const t = locale === 'en' ? en : locale === 'lv' ? lv : et;
 
@@ -27,13 +27,13 @@ export default function KiviprofiilkatusPageHero({ params }: KiviprofiilkatusPag
                 <div className="md:w-[70%] w-full täiskatuse-hero bg-[rgba(0,0,0,0.2)] p-5 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-2xl">
                     <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur select-none">
                         <MdOutlineRoofing className="h-4 w-4" aria-hidden />
-                        <span className="text-sm">Voltamp • {t.TrapetsHeroPreTitle}</span>
+                        <span className="text-sm">Voltamp • {t.EterniitHeroPreTitle}</span>
                     </div>
                     <h1 className="text-xl font-bold leading-tight sm:text-3xl">
-                        <span className="text-def">{t.KiviHeroTitleSpan}</span> {t.KiviHeroTitle}
+                        <span className="text-def">{t.EterniitHeroTitleSpan}</span> {t.EterniitHeroTitle}
                     </h1>
                     <p className="mt-4 text-[14px] md:text-[16px] text-white/90">
-                        {t.KiviHeroText}
+                        {t.EterniitHeroText}
                     </p>
                 </div>
 

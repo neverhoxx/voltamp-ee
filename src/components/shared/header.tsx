@@ -49,7 +49,9 @@ export default function Header({ locale }: HeaderProps) {
         "/et/kasulikku/pildigalerii/viljandimaa", "/lv/kasulikku/pildigalerii/viljandimaa", "/en/kasulikku/pildigalerii/viljandimaa",
         "/et/meist/partnerid", "/lv/meist/partnerid", "/en/meist/partnerid",
         "/et/kasulikku/pildigalerii/autovarjualune", "/lv/kasulikku/pildigalerii/autovarjualune", "/en/kasulikku/pildigalerii/autovarjualune",
-        "/et/kasulikku/pildigalerii/in-roof", "/lv/kasulikku/pildigalerii/in-roof", "/en/kasulikku/pildigalerii/in-roof"
+        "/et/kasulikku/pildigalerii/in-roof", "/lv/kasulikku/pildigalerii/in-roof", "/en/kasulikku/pildigalerii/in-roof",
+        "/et/kasulikku/pildigalerii/maapark", "/lv/kasulikku/pildigalerii/maapark", "/en/kasulikku/pildigalerii/maapark",
+        "/et/kasulikku/pildigalerii/standardlahendus", "/lv/kasulikku/pildigalerii/standardlahendus", "/en/kasulikku/pildigalerii/standardlahendus"
 
     ];
 
@@ -131,7 +133,6 @@ export default function Header({ locale }: HeaderProps) {
     }, []);
 
     const isEestiKeel = currentLocale === "et";
-    console.log(isEestiKeel);
 
     useEffect(() => {
         if (isOpen) {

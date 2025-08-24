@@ -5,7 +5,7 @@ import en from '@/locales/main-hero/en.json';
 import lv from '@/locales/main-hero/lv.json';
 import et from '@/locales/main-hero/et.json';
 
-import heroImg from '@/images/bgs/main-hero-bg.webp';
+import heroImg from '@/images/bgs/bipv-bg.jpg';
 
 import Link from "next/link";
 

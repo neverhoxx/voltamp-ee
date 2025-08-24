@@ -46,7 +46,7 @@ export default function AutovarjualuneSection({ params }: AutovarjualuneSectionP
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6">
                         <div className="flex flex-col items-start">
                             <span className="text-sm text-gray-500">{t[`päikesekatuseVõimsus`]}</span>
-                            <span className="text-2xl font-bold text-gray-800">12,3 kW</span>
+                            <span className="text-2xl font-bold text-gray-800">8,2 kW</span>
                         </div>
 
                         <div className="flex flex-col items-start">

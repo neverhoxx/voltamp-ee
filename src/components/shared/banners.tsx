@@ -31,13 +31,13 @@ export function Banners() {
     }, [totalSlides]);
 
     return (
-        <div className="relative w-full max-w-[1300px] mx-auto overflow-hidden select-none">
+        <div className="relative w-full max-w-[500px] mx-auto overflow-hidden select-none">
             <div
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {banners.map(({ banner, alt }, index) => (
-                    <Link href="" key={index} className="flex-shrink-0 w-full flex justify-center">
+                    <Link href="/et/kontakt" key={index} className="flex-shrink-0 w-full flex justify-center">
                         <Image
                             src={banner}
                             alt={alt}

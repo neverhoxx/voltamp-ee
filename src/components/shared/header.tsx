@@ -47,7 +47,10 @@ export default function Header({ locale }: HeaderProps) {
     const highlightPaths = [
         "/et/tooted", "/lv/tooted", "/en/tooted",
         "/et/kasulikku/pildigalerii/viljandimaa", "/lv/kasulikku/pildigalerii/viljandimaa", "/en/kasulikku/pildigalerii/viljandimaa",
-        "/et/meist/partnerid", "/lv/meist/partnerid", "/en/meist/partnerid"
+        "/et/meist/partnerid", "/lv/meist/partnerid", "/en/meist/partnerid",
+        "/et/kasulikku/pildigalerii/autovarjualune", "/lv/kasulikku/pildigalerii/autovarjualune", "/en/kasulikku/pildigalerii/autovarjualune",
+        "/et/kasulikku/pildigalerii/in-roof", "/lv/kasulikku/pildigalerii/in-roof", "/en/kasulikku/pildigalerii/in-roof"
+
     ];
 
     const isHighlighted = highlightPaths.some(path =>

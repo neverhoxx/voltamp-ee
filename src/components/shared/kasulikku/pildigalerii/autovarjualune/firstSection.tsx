@@ -14,11 +14,11 @@ import "swiper/css/pagination";
 
 import { useRef, useState } from "react";
 
-interface PildigaleriiSectionProps {
+interface AutovarjualuneSectionProps {
     params: { locale: string };
 }
 
-export default function PildigaleriiSection({ params }: PildigaleriiSectionProps) {
+export default function AutovarjualuneSection({ params }: AutovarjualuneSectionProps) {
     const { locale } = params;
     const t = locale === 'en' ? en : locale === 'lv' ? lv : et;
 
@@ -34,11 +34,14 @@ export default function PildigaleriiSection({ params }: PildigaleriiSectionProps
             <Container className="flex flex-wrap justify-between items-center min-h-screen">
                 <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
                     <h2 className="text-3xl font-black text-def">
-                        {t[`firstTööTitle`]}
+                        {t[`thirdTööTitle`]}
                     </h2>
                     <p className="mt-2.5 font-semibold opacity-85">
-                        {t[`firstTööDescription`]}
+                        {t[`thirdTööDescription`]}
+                        <br />
+                        {t[`thirdTööDescription2`]}
                     </p>
+
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6">
                         <div className="flex flex-col items-start">
@@ -53,7 +56,7 @@ export default function PildigaleriiSection({ params }: PildigaleriiSectionProps
 
                         <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
                             <div className="text-gray-600 text-sm">{t[`toode`]}</div>
-                            <Link href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`} className="text-def text-sm font-semibold cursor-pointer">{t[`ehitis`]}</Link>
+                            <Link href="#" className="text-def text-sm font-semibold cursor-pointer">{t[`thirdTööTitle`]}</Link>
 
                             <div className="text-gray-600 text-sm">{t[`riik`]}</div>
                             <div className="text-gray-800 text-sm font-semibold">{t[`eesti`]}</div>
@@ -67,7 +70,7 @@ export default function PildigaleriiSection({ params }: PildigaleriiSectionProps
                 <div className="w-full md:w-[50%] select-none">
                     <video
                         ref={videoRef}
-                        src="/videos/viljandimaaprojekt.mp4"
+                        src="/videos/autovarjualune.mp4"
                         className="w-full h-full object-cover"
                         controls
                     />

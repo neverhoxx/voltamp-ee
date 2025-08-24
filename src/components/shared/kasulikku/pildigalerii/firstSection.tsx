@@ -45,12 +45,12 @@ export default function PildigaleriiSection({ params }: PildigaleriiSectionProps
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6">
                         <div className="flex flex-col items-start">
                             <span className="text-sm text-gray-500">{t[`päikesekatuseVõimsus`]}</span>
-                            <span className="text-2xl font-bold text-gray-800">2</span>
+                            <span className="text-2xl font-bold text-gray-800">12,3 kW</span>
                         </div>
 
                         <div className="flex flex-col items-start">
                             <span className="text-sm text-gray-500">{t[`kogutoodang`]}</span>
-                            <span className="text-2xl font-bold text-gray-800">{t[`pole`]}</span>
+                            <span className="text-2xl font-bold text-gray-800">11 260 kWh</span>
                         </div>
 
                         <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">

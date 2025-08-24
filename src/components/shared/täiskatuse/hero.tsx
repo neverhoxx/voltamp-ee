@@ -18,7 +18,9 @@ interface TäiskatuseHeroProps {
 
 export default function TäiskatuseHero({ params }: TäiskatuseHeroProps) {
     const { locale } = params;
+    const availableLocales = ['en', 'et', 'lv'];
     const t = locale === 'en' ? en : locale === 'lv' ? lv : et;
+    const currentLocale = availableLocales.includes(locale) ? locale : 'et';
 
     return (
         <div
@@ -38,9 +40,16 @@ export default function TäiskatuseHero({ params }: TäiskatuseHeroProps) {
                     </h1>
 
 
-                    <p className="mt-4 text-[14px] md:text-lg text-white/90">
+                    <p className="mt-4 text-[14px] md:text-lg text-white/90 mb-5">
                         {t.heroText2}
                     </p>
+
+                    <Link
+                        className="text-white hover:text-[#00BFFF] font-bold"
+                        href={`/${currentLocale}/kasulikku/pildigalerii`}
+                    >
+                        {t.tehtud} <span className='text-[#00BFFF]'>→</span>
+                    </Link>
                 </div>
 
             </Container>

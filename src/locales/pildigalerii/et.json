@@ -25,7 +25,7 @@
     "secondTööDescription2": "See on ideaalne valik neile, kes hindavad disaini, praktilisust ja kestlikku eluviisi.",
     "thirdTööTitle": "Autovarjualune",
     "thirdTööDescription": "Autovarjualune on praktiline ja esteetiline lahendus, mis kaitseb sõidukit vihma, lume ja päikese eest. Tänu vastupidavatele materjalidele ja läbimõeldud konstruktsioonile sobitub see hästi hoone arhitektuuriga ning pakub mugavust igapäevases kasutuses.",
-    "thirdTööDescription2": "Ideaalne valik neile, kes soovivad ühendada kaitse, funktsionaalsuse ja kaasaegse disaini.",
+    "thirdTööDescription2": "Ideaalne valik neile, kellel on elektriauto, vajadus lisavõimsuse või -kaitse järele, et hinnaline sõiduk säiliks võimalikult kaua värskena ja 'tankimise' kulud oleks kaetud.",
     "fourthTööTitle": "Klassikalised katused",
     "fourthTööDescription": "Klassikaline katus on usaldusväärne ja ajatu lahendus, mis tagab hoonele kindla kaitse aasta läbi. Vastupidavad materjalid ja traditsiooniline ehitusviis loovad tugeva katuse, mis peab vastu nii vihmale, lumele kui ka tuulele.",
     "fourthTööDescription2": "Hea valik neile, kes hindavad töökindlust, vastupidavust ja klassikalist arhitektuuri.",
@@ -34,5 +34,9 @@
     "ehitistäis": "Ehitisntegreeritud- ja täiskatus",
     "maapark": "Maapark",
     "standardpaneeli": "Standardpaneeli süsteemid",
-    "maaparkText": "Maaparki valides saab paigaldada päikesepaneelid olukorras, kus hoone katusele paigaldamine ei ole võimalik või ei ole selles hoone selleks sobiv ning teised võimalused on piiratud. See on sobiv alternatiiv, kui hoone konstruktsioon või - paigutus ei võimalda õigesti suunatud või piisavalt suurte paneelide paigaldamist katusele. Maaparkide kasutamine võib olla suurema alginvesteeringu või suurema pindala nõudmisega, kuid see on vajalik siis, kui teised lahendused ei ole sobivad või strateegiliselt eelistatud."
+    "maaparkText": "Maaparki valides saab paigaldada päikesepaneelid olukorras, kus hoone katusele paigaldamine ei ole võimalik või ei ole selles hoone selleks sobiv ning teised võimalused on piiratud. See on sobiv alternatiiv, kui hoone konstruktsioon või - paigutus ei võimalda õigesti suunatud või piisavalt suurte paneelide paigaldamist katusele. Maaparkide kasutamine võib olla suurema alginvesteeringu või suurema pindala nõudmisega, kuid see on vajalik siis, kui teised lahendused ei ole sobivad või strateegiliselt eelistatud.",
+    "seadmetePaigaldus": "Seadmete paigaldus",
+    "VseadmetePaigaldus": "seadmete paigaldus",
+    "seade": "Seade",
+    "seadmed": "Seadmed"
 }

@@ -11,6 +11,7 @@ import project4 from "@/images/tehtud tööd/klassikaline-katus/klassikaline10.j
 import project5 from "@/images/tehtud tööd/in-roof/in-roof11.jpg";
 import project6 from "@/images/tehtud tööd/maapark/maapark1.jpg"
 import project7 from "@/images/tehtud tööd/standardlahendus/standardlahendus1.jpg";
+import project8 from "@/images/tehtud tööd/seadmed/seadmete-paigaldus-1.jpg";
 
 import Link from "next/link";
 
@@ -129,6 +130,27 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
                         </p>
                         <h3 className="font-bold text-lg text-white mb-5">
                             {t[`maapark`]}
+                        </h3>
+                        <span className="font-bold text-[16px] text-white">{t[`uuri`]} <span className='text-[#00BFFF]'>→</span></span>
+                    </div>
+                </Link>
+
+                <Link
+                    href={`/${currentLocale}/kasulikku/pildigalerii/seadmete-paigaldus`}
+                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                >
+                    <div
+                        className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+                        style={{ backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(${project8.src})` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/20 group-hover:from-black/30 group-hover:to-black/10 transition-all duration-1000" />
+
+                    <div className="relative z-10 text-def">
+                        <p className="text-[12px] font-bold">
+                            {t[`seadmed`]}
+                        </p>
+                        <h3 className="font-bold text-lg text-white mb-5">
+                            {t[`seadmetePaigaldus`]}
                         </h3>
                         <span className="font-bold text-[16px] text-white">{t[`uuri`]} <span className='text-[#00BFFF]'>→</span></span>
                     </div>

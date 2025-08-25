@@ -51,7 +51,10 @@ export default function Header({ locale }: HeaderProps) {
         "/et/kasulikku/pildigalerii/autovarjualune", "/lv/kasulikku/pildigalerii/autovarjualune", "/en/kasulikku/pildigalerii/autovarjualune",
         "/et/kasulikku/pildigalerii/in-roof", "/lv/kasulikku/pildigalerii/in-roof", "/en/kasulikku/pildigalerii/in-roof",
         "/et/kasulikku/pildigalerii/maapark", "/lv/kasulikku/pildigalerii/maapark", "/en/kasulikku/pildigalerii/maapark",
-        "/et/kasulikku/pildigalerii/standardlahendus", "/lv/kasulikku/pildigalerii/standardlahendus", "/en/kasulikku/pildigalerii/standardlahendus"
+        "/et/kasulikku/pildigalerii/standardlahendus", "/lv/kasulikku/pildigalerii/standardlahendus", "/en/kasulikku/pildigalerii/standardlahendus",
+        "/en/kasulikku/pildigalerii/klassikaline-katus", "/et/kasulikku/pildigalerii/klassikaline-katus", "/lv/kasulikku/pildigalerii/klassikaline-katus",
+        "/et/kasulikku/pildigalerii/seadmete-paigaldus", "/en/kasulikku/pildigalerii/seadmete-paigaldus", "/lv/kasulikku/pildigalerii/seadmete-paigaldus",
+        "/et/kasulikku/pildigalerii/holstre", "/en/kasulikku/pildigalerii/holstre", "/lv/kasulikku/pildigalerii/holstre"
 
     ];
 

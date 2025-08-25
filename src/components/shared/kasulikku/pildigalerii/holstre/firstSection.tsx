@@ -100,7 +100,7 @@ export default function HolstreGallerySection({ params }: HolstreGallerySectionP
             {
                 lightboxImg && (
                     <div
-                        className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+                        className="fixed inset-0 z-80 bg-black/80 flex items-center justify-center p-4"
                         onClick={() => setLightboxImg(null)}
                     >
                         <img

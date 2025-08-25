@@ -87,13 +87,13 @@ export default function SeadmedGallerySection({ params }: SeadmedGallerySectionP
                             <img src={huawei1.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(huawei1.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={huawei2.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(huawei2.src)} />
+                            <img src={huawei2.src} alt="Seadmed Volamp" className="w-full h-full object-contain cursor-zoom-in" onClick={() => setLightboxImg(huawei2.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img src={huawei3.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(huawei3.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={huawei4.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(huawei4.src)} />
+                            <img src={huawei4.src} alt="Seadmed Volamp" className="w-full h-full object-contain cursor-zoom-in" onClick={() => setLightboxImg(huawei4.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img src={huawei5.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(huawei5.src)} />
@@ -106,16 +106,15 @@ export default function SeadmedGallerySection({ params }: SeadmedGallerySectionP
                 </div>
             </Container>
 
-            <div className="">
-                <Container className="flex flex-wrap justify-between">
-                    <div className="w-full md:w-[50%] select-none px-2.5">
-                        <Swiper
-                            modules={[Navigation, Pagination, Autoplay]}
-                            navigation
-                            pagination={{ clickable: true }}
-                            autoplay={{ delay: 10000 }}
-                            loop
-                            className="
+            <Container className="flex flex-wrap-reverse justify-between mt-10">
+                <div className="w-full md:w-[50%] select-none px-2.5">
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        navigation
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 10000 }}
+                        loop
+                        className="
                             w-full h-[400px] rounded-2xl shadow overflow-hidden
                             [--swiper-navigation-color:#00BFFF]         
                             [--swiper-navigation-size:28px]                 
@@ -123,62 +122,60 @@ export default function SeadmedGallerySection({ params }: SeadmedGallerySectionP
                             [--swiper-pagination-bullet-inactive-color:#9CA3AF] 
                             [--swiper-pagination-bullet-inactive-opacity:1]
                         "
-                        >
-                            <SwiperSlide>
-                                <img src={solax1.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax1.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={solax2.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax2.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={solax3.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax3.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={solax4.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax4.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={solax5.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax5.src)} />
-                            </SwiperSlide>
+                    >
+                        <SwiperSlide>
+                            <img src={solax1.src} alt="Seadmed Volamp" className="w-full h-full object-contain cursor-zoom-in" onClick={() => setLightboxImg(solax1.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={solax2.src} alt="Seadmed Volamp" className="w-full h-full object-contain cursor-zoom-in" onClick={() => setLightboxImg(solax2.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={solax3.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax3.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={solax4.src} alt="Seadmed Volamp" className="w-full h-full object-contain cursor-zoom-in" onClick={() => setLightboxImg(solax4.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={solax5.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(solax5.src)} />
+                        </SwiperSlide>
 
-                        </Swiper>
-                    </div>
-                    <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
-                        <h2 className="text-3xl font-black text-def text-right">
-                            Solax {t[`VseadmetePaigaldus`]}
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6 ">
+                    </Swiper>
+                </div>
+                <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
+                    <h2 className="text-3xl font-black text-def text-left md:text-right">
+                        Solax {t[`VseadmetePaigaldus`]}
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6 ">
 
-                            <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
-                                <div className="text-gray-600 text-sm">{t[`toode`]}</div>
-                                <Link href={`/${currentLocale}/tooted/sedmed`} className="text-def text-sm font-semibold cursor-pointer">{t[`seade`]}</Link>
-                            </div>
+                        <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
+                            <div className="text-gray-600 text-sm">{t[`toode`]}</div>
+                            <Link href={`/${currentLocale}/tooted/sedmed`} className="text-def text-sm font-semibold cursor-pointer">{t[`seade`]}</Link>
                         </div>
                     </div>
-                </Container>
-            </div>
+                </div>
+            </Container>
 
-            <div className="pt-25">
-                <Container className="flex flex-wrap justify-between">
-                    <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
-                        <h2 className="text-3xl font-black text-def ">
-                            Victron {t[`VseadmetePaigaldus`]}
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6 ">
+            <Container className="flex flex-wrap justify-between mt-10">
+                <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
+                    <h2 className="text-3xl font-black text-def ">
+                        Victron {t[`VseadmetePaigaldus`]}
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6 ">
 
-                            <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
-                                <div className="text-gray-600 text-sm">{t[`toode`]}</div>
-                                <Link href={`/${currentLocale}/tooted/sedmed`} className="text-def text-sm font-semibold cursor-pointer">{t[`seade`]}</Link>
-                            </div>
+                        <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
+                            <div className="text-gray-600 text-sm">{t[`toode`]}</div>
+                            <Link href={`/${currentLocale}/tooted/sedmed`} className="text-def text-sm font-semibold cursor-pointer">{t[`seade`]}</Link>
                         </div>
                     </div>
-                    <div className="w-full md:w-[50%] select-none px-2.5">
-                        <Swiper
-                            modules={[Navigation, Pagination, Autoplay]}
-                            navigation
-                            pagination={{ clickable: true }}
-                            autoplay={{ delay: 10000 }}
-                            loop
-                            className="
+                </div>
+                <div className="w-full md:w-[50%] select-none px-2.5">
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        navigation
+                        pagination={{ clickable: true }}
+                        autoplay={{ delay: 10000 }}
+                        loop
+                        className="
                             w-full h-[400px] rounded-2xl shadow overflow-hidden
                             [--swiper-navigation-color:#00BFFF]         
                             [--swiper-navigation-size:28px]                 
@@ -186,33 +183,32 @@ export default function SeadmedGallerySection({ params }: SeadmedGallerySectionP
                             [--swiper-pagination-bullet-inactive-color:#9CA3AF] 
                             [--swiper-pagination-bullet-inactive-opacity:1]
                         "
-                        >
-                            <SwiperSlide>
-                                <img src={victron1.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron1.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={victron2.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron2.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={victron3.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron3.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={victron4.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron4.src)} />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src={victron5.src} alt="Seadmed Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron5.src)} />
-                            </SwiperSlide>
+                    >
+                        <SwiperSlide>
+                            <img src={victron1.src} alt="Seadmed Volamp" className="w-full h-full md:object-contain object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron1.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={victron2.src} alt="Seadmed Volamp" className="w-full h-full md:object-contain object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron2.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={victron3.src} alt="Seadmed Volamp" className="w-full h-full md:object-contain object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron3.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={victron4.src} alt="Seadmed Volamp" className="w-full h-full md:object-contain object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron4.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={victron5.src} alt="Seadmed Volamp" className="w-full h-full md:object-contain object-cover cursor-zoom-in" onClick={() => setLightboxImg(victron5.src)} />
+                        </SwiperSlide>
 
-                        </Swiper>
-                    </div>
+                    </Swiper>
+                </div>
 
-                </Container>
-            </div>
+            </Container>
 
             {
                 lightboxImg && (
                     <div
-                        className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+                        className="fixed inset-0 z-80 bg-black/80 flex items-center justify-center p-4"
                         onClick={() => setLightboxImg(null)}
                     >
                         <img
@@ -224,6 +220,6 @@ export default function SeadmedGallerySection({ params }: SeadmedGallerySectionP
                 )
             }
 
-        </div>
+        </div >
     );
 }

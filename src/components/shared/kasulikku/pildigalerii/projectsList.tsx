@@ -33,7 +33,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
             <Container className="flex justify-between flex-wrap gap-5">
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/viljandimaa`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -52,7 +52,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/in-roof`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -73,7 +73,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/autovarjualune`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -96,7 +96,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/holstre`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -116,7 +116,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
                 </Link>
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/maapark`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -137,7 +137,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/seadmete-paigaldus`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -158,7 +158,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/standardlahendus`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-[300px] w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
@@ -181,7 +181,7 @@ export default function PildigaleriiList({ params }: PildigaleriiListProps) {
 
                 <Link
                     href={`/${currentLocale}/kasulikku/pildigalerii/klassikaline-katus`}
-                    className="relative bg-[#f5f5f5] min-h-[400px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center items-center text-center"
+                    className="relative bg-[#f5f5f5] min-h-[400px] md:max-w-[300px] max-w-full w-full flex flex-col p-2.5 rounded-xl overflow-hidden group justify-center items-center text-center"
                 >
                     <div
                         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"

@@ -55,7 +55,6 @@ export default function Header({ locale }: HeaderProps) {
         "/en/kasulikku/pildigalerii/klassikaline-katus", "/et/kasulikku/pildigalerii/klassikaline-katus", "/lv/kasulikku/pildigalerii/klassikaline-katus",
         "/et/kasulikku/pildigalerii/seadmete-paigaldus", "/en/kasulikku/pildigalerii/seadmete-paigaldus", "/lv/kasulikku/pildigalerii/seadmete-paigaldus",
         "/et/kasulikku/pildigalerii/holstre", "/en/kasulikku/pildigalerii/holstre", "/lv/kasulikku/pildigalerii/holstre"
-
     ];
 
     const isHighlighted = highlightPaths.some(path =>
@@ -148,7 +147,7 @@ export default function Header({ locale }: HeaderProps) {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 w-full h-[114px] select-none transition-colors duration-500 z-50
+                className={`fixed top-0 left-0 w-full h-[114px] select-none transition-colors duration-500 z-70
                         ${isSolid ? "bg-white" : "bg-white/0"}`}
             >
 
@@ -217,7 +216,7 @@ export default function Header({ locale }: HeaderProps) {
                     </div>
 
                     <div className="header-nav-menu-btn" onClick={openMenu}>
-                        <div className={`menu-btn ${isOpen ? "active" : isSolid ? 'black' : ""}`} />
+                        <div className={`menu-btn ${isOpen ? "active" : isSolid || isHighlighted ? 'black' : ""}`} />
                     </div>
 
                 </Container>
@@ -474,7 +473,7 @@ export default function Header({ locale }: HeaderProps) {
 
             <div
                 className={`fixed top-0 left-0 w-full h-full bg-white pt-[100px] flex flex-col 
-              overflow-y-auto select-none z-10
+              overflow-y-auto select-none z-50
               transform-gpu origin-top transition-transform duration-300 ease-in-out
               ${isOpen ? 'scale-y-100' : 'scale-y-0'}`}
             >

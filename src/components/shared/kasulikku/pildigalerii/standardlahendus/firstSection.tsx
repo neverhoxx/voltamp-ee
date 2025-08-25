@@ -49,7 +49,7 @@ export default function StandardlahendusGallerySection({ params }: Standardlahen
                 {t[`standardlahendus`]}
             </h2>
             <Container className="flex flex-wrap justify-center">
-                <div className="w-1/2 select-none px-2.5">
+                <div className="w-full md:w-1/2 select-none px-2.5">
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
                         navigation
@@ -91,7 +91,7 @@ export default function StandardlahendusGallerySection({ params }: Standardlahen
             {
                 lightboxImg && (
                     <div
-                        className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+                        className="fixed inset-0 z-80 bg-black/80 flex items-center justify-center p-4"
                         onClick={() => setLightboxImg(null)}
                     >
                         <img

@@ -39,14 +39,24 @@ export default function MaaparkGallerySection({ params }: MaaparkGallerySectionP
 
     return (
         <div className="pt-[114px] md:pt-0 min-h-screen flex flex-col items-center justify-center">
-            <p className="text-[12px] font-bold text-center text-def">
-                {t[`standardpaneeli`]}
-            </p>
-            <h2 className="font-bold text-[32px] text-center text-black mb-5">
-                {t[`maapark`]}
-            </h2>
-            <Container className="flex flex-wrap justify-between">
-                <div className="w-full select-none px-2.5">
+            <Container className="flex flex-wrap justify-between items-center min-h-screen">
+                <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
+                    <h2 className="text-3xl font-black text-def">
+                        {t[`maapark`]}
+                    </h2>
+                    <p className="mt-2.5 font-semibold opacity-85">
+                        {t[`maaparkText`]}
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-white rounded-2xl shadow p-6 max-w-2xl mt-6">
+                        <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">
+                            <div className="text-gray-600 text-sm">{t[`toode`]}</div>
+                            <Link href={``} className="text-def text-sm font-semibold cursor-pointer">{t[`maapark`]}</Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="w-full md:w-[50%] select-none">
                     <Swiper
                         modules={[Navigation, Pagination, Autoplay]}
                         navigation
@@ -63,13 +73,13 @@ export default function MaaparkGallerySection({ params }: MaaparkGallerySectionP
                         "
                     >
                         <SwiperSlide>
-                            <img src={maapark1.src} alt="In-Roof Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark1.src)} />
+                            <img src={maapark1.src} alt="Gallery 3" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark1.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={maapark2.src} alt="In-Roof Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark2.src)} />
+                            <img src={maapark2.src} alt="Gallery 2" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark2.src)} />
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img src={maapark3.src} alt="In-Roof Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark3.src)} />
+                            <img src={maapark3.src} alt="Gallery 2" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(maapark3.src)} />
                         </SwiperSlide>
                     </Swiper>
                 </div>
@@ -90,6 +100,6 @@ export default function MaaparkGallerySection({ params }: MaaparkGallerySectionP
                 )
             }
 
-        </div >
+        </div>
     );
 }

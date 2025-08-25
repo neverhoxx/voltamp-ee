@@ -21,7 +21,7 @@
     "uuri": "Uuri lähemalt",
     "secondTitleInRoof": "In-roof",
     "secondTööTitle": " lahenduse töö",
-    "secondTööDescription": " lahendus tähendab, et päikesepaneelid on integreeritud otse katusekatte asemele. Selline katus loob ühtlase ja modernse ilme, olles samal ajal ka energiatõhus ja vastupidav. Paneelid kaitsevad hoonet vihma, lume ja tuule eest ning toodavad puhast taastuvenergiat.",
+    "secondTööDescription": " lahendus tähendab, et päikesepaneelid on integreeritud otse katusekatte asemele ja sobitub kokku muude katusekattematerjalidega (kivi, plekk, eterniit jms materjal). Selline katus loob ühtlase ja modernse ilme, olles samal ajal ka energiatohus ja vastupidav. Paneelid kaitsevad hoonet vihma, lume ja tuule eest ning toodavad puhast taastuvenergiat.",
     "secondTööDescription2": "See on ideaalne valik neile, kes hindavad disaini, praktilisust ja kestlikku eluviisi.",
     "thirdTööTitle": "Autovarjualune",
     "thirdTööDescription": "Autovarjualune on praktiline ja esteetiline lahendus, mis kaitseb sõidukit vihma, lume ja päikese eest. Tänu vastupidavatele materjalidele ja läbimõeldud konstruktsioonile sobitub see hästi hoone arhitektuuriga ning pakub mugavust igapäevases kasutuses.",
@@ -33,5 +33,6 @@
     "ehitisKatused": " katused",
     "ehitistäis": "Ehitisntegreeritud- ja täiskatus",
     "maapark": "Maapark",
-    "standardpaneeli": "Standardpaneeli süsteemid"
+    "standardpaneeli": "Standardpaneeli süsteemid",
+    "maaparkText": "Maaparki valides saab paigaldada päikesepaneelid olukorras, kus hoone katusele paigaldamine ei ole võimalik või ei ole selles hoone selleks sobiv ning teised võimalused on piiratud. See on sobiv alternatiiv, kui hoone konstruktsioon või - paigutus ei võimalda õigesti suunatud või piisavalt suurte paneelide paigaldamist katusele. Maaparkide kasutamine võib olla suurema alginvesteeringu või suurema pindala nõudmisega, kuid see on vajalik siis, kui teised lahendused ei ole sobivad või strateegiliselt eelistatud."
 }

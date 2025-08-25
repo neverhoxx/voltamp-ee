@@ -19,7 +19,7 @@
     "uuri": "Uzziniet vairāk",
     "secondTitleInRoof": "In-roof",
     "secondTööTitle": " risinājuma darbs",
-    "secondTööDescription": " risinājums nozīmē, ka saules paneļi tiek integrēti tieši jumta seguma vietā. Šāds jumts veido vienotu un modernu izskatu, vienlaikus būdams energoefektīvs un izturīgs. Paneļi pasargā ēku no lietus, sniega un vēja, vienlaikus ražojot tīru atjaunojamo enerģiju.",
+    "secondTööDescription": " risinājums nozīmē, ka saules paneļi ir integrēti tieši jumta seguma vietā un sader ar citiem jumta seguma materiāliem (dakstiņiem, skārdu, šīferi u.c.). Šāds jumts rada vienmērīgu un modernu izskatu, vienlaikus būdams energoefektīvs un izturīgs. Paneļi aizsargā ēku no lietus, sniega un vēja, kā arī ražo tīru atjaunojamo enerģiju.",
     "secondTööDescription2": "Tas ir ideāls risinājums tiem, kuri novērtē dizainu, praktiskumu un ilgtspējīgu dzīvesveidu.",
     "thirdTööTitle": "Auto nojume",
     "thirdTööDescription": "Auto nojume ir praktisks un estētisks risinājums, kas aizsargā transportlīdzekli no lietus, sniega un saules. Pateicoties izturīgiem materiāliem un pārdomātai konstrukcijai, tas lieliski iekļaujas ēkas arhitektūrā un nodrošina ērtības ikdienā.",
@@ -31,5 +31,6 @@
     "ehitisKatused": "jumti",
     "ehitistäis": "Ēkā integrēts un pilns jumts",
     "maapark": "Zemes stacija",
-    "standardpaneeli": "Standarta paneļu sistēmas"
+    "standardpaneeli": "Standarta paneļu sistēmas",
+    "maaparkText": "Izvēloties saules paneļu uzstādīšanu uz zemes, tos iespējams ierīkot situācijās, kad jumta uzstādīšana nav iespējama vai ēka tam nav piemērota, un citas iespējas ir ierobežotas. Tas ir piemērots risinājums, ja ēkas konstrukcija vai izvietojums neļauj uz jumta uzstādīt pareizi orientētus vai pietiekami lielus paneļus. Zemes saules parki var prasīt lielākas sākotnējās investīcijas vai plašāku teritoriju, taču tie ir nepieciešami, ja citi risinājumi nav piemēroti vai stratēģiski vēlamāki."
 }

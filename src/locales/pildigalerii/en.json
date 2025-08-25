@@ -19,8 +19,8 @@
     "uuri": "Learn more",
     "secondTööTitle": " solution in action",
     "secondTitleInRoof": "In-roof",
-    "secondTööDescription": " solution means that solar panels are integrated directly into the roof covering. This creates a smooth and modern look while also being energy-efficient and durable. The panels protect the building from rain, snow and wind, while generating clean renewable energy.",
-    "secondTööDescription2": "It is an ideal choice for those who value design, practicality and a sustainable lifestyle.",
+    "secondTööDescription": " solution means that the solar panels are integrated directly in place of the roofing material and match with other roof coverings (tiles, metal, slate, etc.). Such a roof creates a uniform and modern appearance, while also being energy-efficient and durable. The panels protect the building from rain, snow, and wind while producing clean renewable energy.",
+    "secondTööDescription2": "It is an ideal choice for those who value design, practicality, and a sustainable lifestyle.",
     "thirdTööTitle": "Carport",
     "thirdTööDescription": "A carport is a practical and aesthetic solution that protects your vehicle from rain, snow and sun. Thanks to durable materials and a well-thought-out design, it blends seamlessly with the architecture of the building and offers everyday convenience.",
     "thirdTööDescription2": "An ideal choice for those who want to combine protection, functionality and modern design.",
@@ -31,5 +31,6 @@
     "ehitisKatused": " roofs",
     "ehitistäis": "Building-integrated and full roof",
     "maapark": "Ground-mounted system",
-    "standardpaneeli": "Standard panel systems"
+    "standardpaneeli": "Standard panel systems",
+    "maaparkText": "By choosing a ground-mounted solar park, solar panels can be installed in situations where rooftop installation is not possible or the building is not suitable for it, and other options are limited. This is a suitable alternative when the building’s structure or layout does not allow for properly oriented or sufficiently large panels to be installed on the roof. Ground-mounted systems may require a higher initial investment or larger area, but they are necessary when other solutions are not suitable or strategically preferred."
 }

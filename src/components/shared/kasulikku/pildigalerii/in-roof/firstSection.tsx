@@ -50,7 +50,7 @@ export default function InRoofGallerySection({ params }: InRoofGallerySectionPro
             <Container className="flex flex-wrap justify-between items-center min-h-screen">
                 <div className="w-full md:w-[40%] adaptive-tehtud-tööd">
                     <h2 className="text-3xl font-black text-def">
-                        <span className={`${isEestiKeel ? "italic" : "regular"} `}>{t[`secondTitleInRoof`]}</span> {t[`secondTööTitle`]}
+                        <span className={`${isEestiKeel ? "italic" : "regular"} `}>{t[`secondTitleInRoof`]}</span> {t[`ehitisLahendus`]}
                     </h2>
                     <p className="mt-2.5 font-semibold opacity-85">
                         <span className={`${isEestiKeel ? "italic" : "regular"} `}>{t[`secondTitleInRoof`]}</span>{t[`secondTööDescription`]}

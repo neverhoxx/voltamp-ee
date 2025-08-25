@@ -79,7 +79,7 @@ export default function HolstreGallerySection({ params }: HolstreGallerySectionP
 
                         <div className="flex flex-col items-start">
                             <span className="text-sm text-gray-500">{t[`kogutoodang`]}</span>
-                            <span className="text-2xl font-bold text-gray-800">11 041 kWh</span>
+                            <span className="text-2xl font-bold text-gray-800">≈ 11 041 kWh</span>
                         </div>
 
                         <div className="col-span-1 md:col-span-2 border-t pt-4 grid grid-cols-2 gap-y-3">

@@ -473,10 +473,10 @@ export default function Header({ locale }: HeaderProps) {
             </div>
 
             <div
-                className={`top-0 left-0 w-full h-full bg-white pt-[100px] flex flex-col overflow-hidden select-none z-45
-          transform origin-top transition-transform duration-300 ease-in-out 
-          ${isOpen ? 'scale-y-100 relative' : 'scale-y-0 fixed'}
-        `}
+                className={`fixed top-0 left-0 w-full h-full bg-white pt-[100px] flex flex-col 
+              overflow-y-auto select-none z-10
+              transform-gpu origin-top transition-transform duration-300 ease-in-out
+              ${isOpen ? 'scale-y-100' : 'scale-y-0'}`}
             >
                 <nav className="flex flex-col flex-1 px-3">
                     <Accordion
@@ -550,12 +550,17 @@ export default function Header({ locale }: HeaderProps) {
                         </AccordionItem>
 
                         <AccordionItem value="item-4">
-                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`tehtud`]}</AccordionTrigger>
+                            <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`kasulikku`]}</AccordionTrigger>
                             <AccordionContent className="flex flex-col gap-4 text-balance">
                                 <ul className="font-bold">
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/kasulikku/pildigalerii`}>
+                                            {t[`tehtud`]} <span className='text-def'>→</span>
+                                        </Link>
+                                    </li>
                                     <li className=''>
                                         <Link className='font-medium text-[14px]' href={`/${currentLocale}/kasulikku/pildigalerii`}>
-                                            {t[`galerii`]} <span className='text-def'>→</span>
+                                            {t[`uuri`]} <span className='text-def'>→</span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -566,9 +571,34 @@ export default function Header({ locale }: HeaderProps) {
                             <AccordionTrigger className="text-def font-black text-[16px] cursor-pointer">{t[`paigaldus`]}</AccordionTrigger>
                             <AccordionContent className="flex flex-col gap-4 text-balance">
                                 <ul className="font-bold">
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/trapetsprofiilkatus`}>
+                                            {t[`trapetsprofiilkatus`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/valtsplekk-katus`}>
+                                            {t[`valtsplekk`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/kiviprofiilkatus`}>
+                                            {t[`kiviprofiilkatus`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/eterniit-katus`}>
+                                            {t[`eterniit`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-1'>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/lainekivi`}>
+                                            {t[`lainekivi`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
                                     <li className=''>
-                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus`}>
-                                            {t[`uuri`]} <span className='text-[#00BFFF]'>→</span>
+                                        <Link className='font-medium text-[14px]' href={`/${currentLocale}/katuse-paigaldus/silekivi`}>
+                                            {t[`silekivi`]} <span className='text-[#00BFFF]'>→</span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -606,7 +636,7 @@ export default function Header({ locale }: HeaderProps) {
                 </nav>
 
 
-                <div className="absolute bottom-0 w-full flex justify-center items-center gap-5 p-4 border-t bg-white border-gray-300 select-text">
+                <div className="w-full flex justify-center items-center gap-5 p-4 border-t bg-white border-gray-300 select-text">
                     <Link className="text-black hover:text-blue-600" href="https://www.facebook.com/share/19VfGPjeYt/">
                         Facebook
                     </Link>

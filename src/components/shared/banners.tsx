@@ -25,7 +25,7 @@ export function Banners() {
 
     React.useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex(prev => (prev + 1) % totalSlides);
+            setCurrentIndex((prev) => (prev + 1) % totalSlides);
         }, 4000);
         return () => clearInterval(interval);
     }, [totalSlides]);
@@ -37,12 +37,22 @@ export function Banners() {
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
                 {banners.map(({ banner, alt }, index) => (
-                    <Link href="/et/kontakt" key={index} className="flex-shrink-0 w-full flex justify-center">
+                    <Link
+                        href="/et/kontakt"
+                        key={index}
+                        className="flex-shrink-0 w-full flex justify-center items-center"
+                    >
                         <Image
                             src={banner}
                             alt={alt}
                             width={1300}
-                            className="w-full max-h-[400px] h-auto object-contain"
+                            className="
+                w-full 
+                h-auto 
+                max-h-[400px] 
+                object-contain
+                
+              "
                         />
                     </Link>
                 ))}

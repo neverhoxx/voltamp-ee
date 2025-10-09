@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 import en from "@/locales/kontakt/en.json";
 import lv from "@/locales/kontakt/lv.json";
 import et from "@/locales/kontakt/et.json";
@@ -49,15 +50,12 @@ export const metadata: Metadata = {
     }
 };
 
-
-
 export default function KontaktBlock({ params }: KontaktBlockProps) {
     const { locale } = params;
     const t = locale === "en" ? en : locale === "lv" ? lv : et;
 
     const { cart } = useCart();
     const [includeCart, setIncludeCart] = useState(false);
-
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -68,10 +66,9 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
-    const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -84,6 +81,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
             newErrors.email = t[`emailError2`];
         }
         if (!formData.phone.trim()) newErrors.phone = t[`phoneError1`];
+        if (!captchaToken) newErrors.captcha = t[`captchaError`] || "Please verify you are not a robot.";
         return newErrors;
     };
 
@@ -107,6 +105,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
         const formPayload = {
             ...formData,
             cartItems: includeCart && cart.length > 0 ? formatCartAsText(cart) : "",
+            "g-recaptcha-response": captchaToken,
         };
 
         try {
@@ -119,6 +118,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
             setSuccess(true);
             setFormData({ name: "", phone: "", email: "", message: "" });
             setIncludeCart(false);
+            setCaptchaToken(null);
         } catch (err) {
             console.error("EmailJS error:", err);
             alert(t[`serverError`]);
@@ -128,116 +128,90 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
     };
 
     return (
-        <>
+        <section
+            className="relative bg-[#0094c5] select-none py-[114px]"
+            style={{ clipPath: "polygon(0 0, 100% 0%, 100% 95%, 0 100%)" }}
+        >
+            <div className="absolute inset-0 -z-10 bg-[#0094c5]" />
+            <div className="mx-auto max-w-4xl px-6 text-white">
+                <h2 className="text-2xl font-semibold sm:text-3xl z-5">{t.kontaktTitle}</h2>
+                <p className="mt-2 text-white/80">{t.kontaktSubTitle}</p>
 
-            <section
-                className="relative  bg-[#0094c5] select-none py-[114px]"
-                style={{ clipPath: "polygon(0 0, 100% 0%, 100% 95%, 0 100%)" }}
-            >
-                <div className="absolute inset-0 -z-10 bg-[#0094c5]" />
-                <div className="mx-auto max-w-4xl px-6 text-white">
-                    <h2 className="text-2xl font-semibold sm:text-3xl z-5">
-                        {t.kontaktTitle}
-                    </h2>
-                    <p className="mt-2 text-white/80">{t.kontaktSubTitle}</p>
-                    {errors.name && (
-                        <p className="text-red-900 text-sm">{errors.name}</p>
-                    )}
-                    {errors.email && (
-                        <p className="text-red-900 text-sm">{errors.email}</p>
-                    )}
-                    {errors.phone && (
-                        <p className="text-red-900 text-sm">{errors.phone}</p>
-                    )}
-                    <form
-                        onSubmit={handleSubmit}
-                        className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2"
-                    >
-                        <input
-                            className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur"
-                            placeholder={t.nimi}
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
+                {errors.name && <p className="text-red-900 text-sm">{errors.name}</p>}
+                {errors.email && <p className="text-red-900 text-sm">{errors.email}</p>}
+                {errors.phone && <p className="text-red-900 text-sm">{errors.phone}</p>}
+                {errors.captcha && <p className="text-red-900 text-sm">{errors.captcha}</p>}
+
+                <form onSubmit={handleSubmit} className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <input
+                        className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur"
+                        placeholder={t.nimi}
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur"
+                        placeholder={t.email}
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                    <input
+                        className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur md:col-span-2"
+                        placeholder={t.phone}
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                    />
+                    <textarea
+                        className="h-28 rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur md:col-span-2"
+                        placeholder={t.description}
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                    />
+
+                    {/* ✅ reCAPTCHA */}
+                    <div className="md:col-span-2 flex justify-center">
+                        <ReCAPTCHA
+                            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                            onChange={(token) => setCaptchaToken(token)}
                         />
+                    </div>
 
+                    <div className="md:col-span-2">
+                        <label className="flex items-center gap-2 text-white/80">
+                            <input
+                                type="checkbox"
+                                checked={includeCart}
+                                onChange={(e) => setIncludeCart(e.target.checked)}
+                            />
+                            {t[`ostukorv`]}
+                        </label>
+                    </div>
 
-                        <input
-                            className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur"
-                            placeholder={t.email}
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                        />
+                    <div className="flex items-center gap-3 md:col-span-2 flex-wrap">
+                        <Button className="rounded-2xl px-6 py-6" type="submit" disabled={loading}>
+                            {loading ? t[`laadimine`] : t.send}
+                        </Button>
 
+                        {success && <span className="text-green-200">✅ {t[`saadetud`]}</span>}
 
-                        <input
-                            className="rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur md:col-span-2"
-                            placeholder={t.phone}
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                        />
-
-
-                        <textarea
-                            className="h-28 rounded-xl border border-white/20 bg-white/50 p-3 placeholder-black outline-none backdrop-blur md:col-span-2"
-                            placeholder={t.description}
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                        />
-
-                        <div className="md:col-span-2">
-                            <label className="flex items-center gap-2 text-white/80">
-                                <input
-                                    type="checkbox"
-                                    checked={includeCart}
-                                    onChange={(e) => setIncludeCart(e.target.checked)}
-                                />
-                                {t[`ostukorv`]}
-                            </label>
-                        </div>
-
-                        <div className="flex items-center gap-3 md:col-span-2 flex-wrap">
-                            <Button
-                                className="rounded-2xl px-6 py-6"
-                                type="submit"
-                                disabled={loading}
-                            >
-                                {loading ? t[`laadimine`] : t.send}
-                            </Button>
-
-                            {success && (
-                                <span className="text-green-200">
-                                    ✅ {t[`saadetud`]}
-                                </span>
-                            )}
-
-                            <a
-                                href="tel:+37255534314"
-                                className="inline-flex items-center gap-2 text-white/90 hover:text-white"
-                            >
-                                <Phone className="h-4 w-4" /> +372 555 343 14
-                            </a>
-                            <a
-                                href="mailto:info@voltamp.ee"
-                                className="inline-flex items-center gap-2 text-white/90 hover:text-white"
-                            >
-                                <Mail className="h-4 w-4" /> info@voltamp.ee
-                            </a>
-                            <a
-                                href="#"
-                                className="inline-flex items-center gap-2 text-white/90 hover:text-white"
-                            >
-                                <MessageSquare className="h-4 w-4" /> {t.vestle}
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </section>
-        </>
+                        <a href="tel:+37255534314" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
+                            <Phone className="h-4 w-4" /> +372 555 343 14
+                        </a>
+                        <a href="mailto:info@voltamp.ee" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
+                            <Mail className="h-4 w-4" /> info@voltamp.ee
+                        </a>
+                        <a href="#" className="inline-flex items-center gap-2 text-white/90 hover:text-white">
+                            <MessageSquare className="h-4 w-4" /> {t.vestle}
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </section>
     );
 }

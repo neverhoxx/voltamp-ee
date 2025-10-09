@@ -81,7 +81,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
             newErrors.email = t[`emailError2`];
         }
         if (!formData.phone.trim()) newErrors.phone = t[`phoneError1`];
-        if (!captchaToken) newErrors.captcha = t[`captchaError`] || "Please verify you are not a robot.";
+        if (!captchaToken) newErrors.captcha = "Please verify you are not a robot.";
         return newErrors;
     };
 

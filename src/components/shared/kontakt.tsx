@@ -174,7 +174,6 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
                         onChange={handleChange}
                     />
 
-                    {/* ✅ reCAPTCHA */}
                     <div className="md:col-span-2 flex justify-center">
                         <ReCAPTCHA
                             sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
@@ -194,7 +193,7 @@ export default function KontaktBlock({ params }: KontaktBlockProps) {
                     </div>
 
                     <div className="flex items-center gap-3 md:col-span-2 flex-wrap">
-                        <Button className="rounded-2xl px-6 py-6" type="submit" disabled={loading}>
+                        <Button className="rounded-2xl px-6 py-6 bg-blue-500" type="submit" disabled={loading}>
                             {loading ? t[`laadimine`] : t.send}
                         </Button>
 

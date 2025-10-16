@@ -180,7 +180,14 @@ export default function Header({ locale }: HeaderProps) {
                                     </button>
                                 </li>
                             ))}
-
+                            <li>
+                                <Link
+                                    href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}
+                                    className='text-white'
+                                >
+                                    {t[`nav.solantra-päikesekatus`]}
+                                </Link>
+                            </li>
                         </ul>
 
                     </nav>
@@ -493,9 +500,17 @@ export default function Header({ locale }: HeaderProps) {
                                             {t[`täiskatuse`]} <span className='text-[#00BFFF]'>→</span>
                                         </Link>
                                     </li>
-                                    <li className=''>
+                                    <li className='mb-1'>
                                         <Link className='font-medium text-[14px]' href={`/${currentLocale}/integreeritav-paikesekatus/in-roof-susteem`}>
                                             <span className={`${isEestiKeel ? "italic" : "regular"} `}>{t[`inroof`]}</span> {t[`inroofsüst`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link
+                                            href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}
+                                            className='text-white'
+                                        >
+                                            {t[`nav.solantra-päikesekatus`]}
                                         </Link>
                                     </li>
                                 </ul>

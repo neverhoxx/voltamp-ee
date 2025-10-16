@@ -508,9 +508,9 @@ export default function Header({ locale }: HeaderProps) {
                                     <li>
                                         <Link
                                             href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}
-                                            className='text-white'
+                                            className='font-medium text-[14px]'
                                         >
-                                            {t[`nav.solantra-päikesekatus`]}
+                                            {t[`nav.solantra-päikesekatus`]} <span className='text-[#00BFFF]'>→</span>
                                         </Link>
                                     </li>
                                 </ul>
@@ -647,7 +647,7 @@ export default function Header({ locale }: HeaderProps) {
                         </AccordionItem>
 
                     </ Accordion>
-                </nav>
+                </nav >
 
 
                 <div className="w-full flex justify-center items-center gap-5 p-4 border-t bg-white border-gray-300 select-text">
@@ -658,7 +658,7 @@ export default function Header({ locale }: HeaderProps) {
                         Võta ühendust: Info@voltamp.ee, või tel: +372 555 343 14
                     </span>
                 </div>
-            </div>
+            </div >
         </>
     );
 }

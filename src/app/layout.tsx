@@ -3,6 +3,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
+import { Analytics } from "@vercel/analytics/next"
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -45,6 +47,7 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={`${montserrat.variable} antialiased relative`}>
+        <Analytics />
         <CartProvider>
           {children}
         </CartProvider>

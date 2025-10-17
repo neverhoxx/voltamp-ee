@@ -40,15 +40,15 @@ export default function TäiskatuseHero({ params }: TäiskatuseHeroProps) {
                     </h1>
 
 
-                    <p className="mt-4 text-[14px] md:text-lg text-white/90 mb-5">
+                    <p className="mt-4 text-[14px] md:text-lg text-white/90 mb-10">
                         {t.heroText2}
                     </p>
 
                     <Link
-                        className="text-[#00BFFF] hover:text-white font-bold"
+                        className="rounded-2xl px-6 py-3 bg-[#00BFFF] text-[#fff] hover:bg-white hover:text-black duration-500 font-bold "
                         href={`/${currentLocale}/kasulikku/pildigalerii`}
                     >
-                        {t.tehtud} <span className='text-[#00BFFF]'>→</span>
+                        {t.tehtud} →
                     </Link>
                 </div>
 

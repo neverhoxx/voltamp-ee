@@ -12,11 +12,11 @@ import solisbanner1010 from "@/images/banners/solis-x-dyness-10-10-banner.png";
 import solisbanner1514 from "@/images/banners/solis-x-dyness-15-20-banner.png";
 
 const banners = [
-    { banner: solaxBanner, alt: "Solax Komplekt 15kW/20kWh" },
-    { banner: solisBanner1015, alt: "Solis Komplekt 10kW/15kWh" },
-    { banner: solisBanner2021, alt: "Solax Komplekt 20kW/21kWh" },
-    { banner: solisbanner1010, alt: "Solis ja Dyness 10kW/10kWh" },
-    { banner: solisbanner1514, alt: "Solis ja Dyness 15kW/14kWh" },
+    { banner: solaxBanner, alt: "Solax Komplekt 15kW/20kWh", hreff: "/en/tooted/solax-inverter-solax-akupank" },
+    { banner: solisBanner1015, alt: "Solis Komplekt 10kW/15kWh", hreff: "/en/tooted/solis-leapton" },
+    { banner: solisBanner2021, alt: "Solax Komplekt 20kW/21kWh", hreff: "/en/tooted/solax-inverter-ja-solax-akupank-20-21" },
+    { banner: solisbanner1010, alt: "Solis ja Dyness 10kW/10kWh", hreff: "/en/tooted/solis-inverter-ja-dyness-akupank" },
+    { banner: solisbanner1514, alt: "Solis ja Dyness 15kW/14kWh", hreff: "/en/tooted/dyness-battery-ja-solis-hubriid" },
 ];
 
 export function Banners() {
@@ -44,9 +44,9 @@ export function Banners() {
                 className="flex transition-transform duration-700 ease-in-out"
                 style={{ transform: `translateX(-${currentIndex * 100}%)` }}
             >
-                {banners.map(({ banner, alt }, index) => (
+                {banners.map(({ banner, alt, hreff }, index) => (
                     <Link
-                        href="/et/kontakt"
+                        href={hreff}
                         key={index}
                         className="flex-shrink-0 w-full flex justify-center items-center"
                     >

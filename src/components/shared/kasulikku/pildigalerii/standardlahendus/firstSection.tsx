@@ -23,6 +23,9 @@ import standardlahendus3 from "@/images/tehtud tööd/standardlahendus/standardl
 import standardlahendus4 from "@/images/tehtud tööd/standardlahendus/standardlahendus4.jpg";
 import standardlahendus5 from "@/images/tehtud tööd/standardlahendus/standardlahendus5.jpg";
 import standardlahendus6 from "@/images/tehtud tööd/standardlahendus/standardlahendus6.jpg";
+import standardlahendus7 from "@/images/tehtud tööd/standardlahendus/WhatsApp Image 2025-10-29 at 16.45.53_7546b55d.jpg";
+import standardlahendus8 from "@/images/tehtud tööd/standardlahendus/WhatsApp Image 2025-10-29 at 16.46.38_1f59bef4.jpg";
+
 
 interface StandardlahendusGallerySectionProps {
     params: { locale: string };
@@ -82,6 +85,15 @@ export default function StandardlahendusGallerySection({ params }: Standardlahen
                         </SwiperSlide>
                         <SwiperSlide>
                             <img src={standardlahendus6.src} alt="Standard Lahendus Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(standardlahendus6.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={standardlahendus6.src} alt="Standard Lahendus Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(standardlahendus6.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={standardlahendus7.src} alt="Standard Lahendus Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(standardlahendus7.src)} />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img src={standardlahendus8.src} alt="Standard Lahendus Volamp" className="w-full h-full object-cover cursor-zoom-in" onClick={() => setLightboxImg(standardlahendus8.src)} />
                         </SwiperSlide>
 
                     </Swiper>

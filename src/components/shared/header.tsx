@@ -183,7 +183,16 @@ export default function Header({ locale }: HeaderProps) {
                             <li>
                                 <Link
                                     href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}
-                                    className='text-white'
+                                    className={`transition-colors duration-500 hover:text-[#FFAC12] cursor-pointer ${isHighlighted
+                                        ? 'text-black'
+                                        : isSolid && activeMegaMenu
+                                            ? 'text-black'
+
+
+                                            : isSolid
+                                                ? 'text-black'
+                                                : 'text-white'
+                                        }`}
                                 >
                                     {t[`nav.solantra-päikesekatus`]}
                                 </Link>
@@ -246,6 +255,11 @@ export default function Header({ locale }: HeaderProps) {
                                     <li className='mb-2.5'>
                                         <Link className='font-medium text-[16px]' href={`/${currentLocale}/tooted/seadmed`}>
                                             {t[`seadmed`]} <span className='text-[#00BFFF]'>→</span>
+                                        </Link>
+                                    </li>
+                                    <li className='mb-2.5'>
+                                        <Link className='font-medium text-[16px]' href={`/${currentLocale}/tooted/komplektid`}>
+                                            {t[`komplektid`]} <span className='text-[#00BFFF]'>→</span>
                                         </Link>
                                     </li>
                                 </ul>

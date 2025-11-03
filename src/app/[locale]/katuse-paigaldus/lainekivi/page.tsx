@@ -2,7 +2,7 @@ import React from "react";
 
 import LainekiviKatusPageHero from "@/components/shared/katuse-paigaldus/lainekivi/hero";
 import LainekiviKatusFirstBlock from "@/components/shared/katuse-paigaldus/lainekivi/firstBlock";
-import LainekiviKatusSecondBlock from "@/components/shared/katuse-paigaldus/eterniit/secondBlock";
+import LainekiviKatusSecondBlock from "@/components/shared/katuse-paigaldus/lainekivi/secondBlock";
 
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];

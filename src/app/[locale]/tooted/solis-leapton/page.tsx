@@ -28,61 +28,59 @@ export default function SolisKomplekt() {
             details: 'Read more',
             km: 'VAT',
             price: '5845.5',
-            descTitle: 'Battery Solutions with Market Control Module',
-            desc1: `Market control means automated management of the energy storage system according to electricity price fluctuations on the Nord Pool exchange.`,
-            desc2: `Sunergia offers reliable and efficient battery solutions with market control modules such as SolaX and Growatt.`,
-            advantagesTitle: 'Advantages of Market Control',
+            descTitle: 'Complete Energy Storage Solutions from Voltamp',
+            desc1: `Voltamp offers innovative battery systems like the Solis inverter and Leapton battery, ensuring stable and smart home energy management. Our solutions help you make the most of dynamic electricity prices and store clean solar energy efficiently.`,
+            desc2: `With Voltamp.ee, you get a reliable and future-proof setup — combining high-quality components, smart automation, and market control integration for maximum performance and savings.`,
+            advantagesTitle: 'Why Choose Voltamp Market-Controlled System',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Significant electricity cost savings – use energy when prices are low.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimal battery usage – ensures your system operates efficiently.' },
-                { icon: <MdTrendingUp />, text: 'Earning potential – sell stored energy back to the grid.' },
-                { icon: <MdEco />, text: 'Green and sustainable – supports renewable energy transition.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Reduce your energy costs by using stored energy when prices are low.' },
+                { icon: <MdBatteryChargingFull />, text: 'Smart and efficient charging management extends battery lifespan.' },
+                { icon: <MdTrendingUp />, text: 'Generate income by selling excess energy back to the grid.' },
+                { icon: <MdEco />, text: 'Sustainable and green — optimized for renewable energy usage.' },
             ],
-            freqTitle: 'Frequency Market',
-            freqText: `The frequency market helps maintain grid stability. Connected battery systems can earn revenue by balancing supply and demand.`,
+            freqTitle: 'Frequency Market and Smart Grid Integration',
+            freqText: `Voltamp systems support frequency market participation, helping balance grid demand while generating passive income from your battery setup.`,
         },
         et: {
             name: 'Solis inverter + Leapton akupank',
             details: 'Loe edasi',
             km: 'KM',
             price: '5845.5',
-            descTitle: 'Akulahendused börsijuhtimismooduliga',
-            desc1: `Börsijuhtimine tähendab energiasalvestussüsteemi automatiseeritud haldamist vastavalt elektrihinna kõikumisele Nord Pooli elektribörsil.`,
-            desc2: `Sunergia tootevalikust leiad töökindlad ja efektiivsed akulahendused börsijuhtimismooduliga nagu SolaX ja Growatt.`,
-            advantagesTitle: 'Börsijuhtimise eelised',
+            descTitle: 'Täislahendus akusalvestiga Voltamp.ee-lt',
+            desc1: `Voltamp pakub nutikaid energiasalvestuslahendusi nagu Solis inverter ja Leapton akupank, mis tagavad sinu kodu energiatarbimise stabiilsuse ja efektiivsuse. Meie süsteemid võimaldavad kasutada elektrit soodsa hinnaga ja salvestada päikeseenergiat tulevikuks.`,
+            desc2: `Valides Voltamp komplekti, saad töökindla ja kaasaegse lahenduse, mis ühendab kvaliteetsed seadmed, automaatse juhtimise ning börsijuhtimise mooduli maksimaalse energiatõhususe saavutamiseks.`,
+            advantagesTitle: 'Miks valida Voltamp.ee börsijuhtimisega süsteem',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Märkimisväärne elektrikulude kokkuhoid – kasuta elektrit siis, kui hind on madal.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimaalne aku kasutamine – tagab süsteemi maksimaalse efektiivsuse.' },
-                { icon: <MdTrendingUp />, text: 'Tulu teenimise võimalus – müü võrku energiat, kui elektrihind on kõrge.' },
-                { icon: <MdEco />, text: 'Roheline ja jätkusuutlik lahendus – vähendab elektrivõrgu koormust.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Säästa elektrikuludelt, kasutades salvestatud energiat odava hinna ajal.' },
+                { icon: <MdBatteryChargingFull />, text: 'Tark laadimishaldus pikendab aku eluiga ja parandab tõhusust.' },
+                { icon: <MdTrendingUp />, text: 'Teeni lisatulu, müües ülejäävat energiat võrku tagasi.' },
+                { icon: <MdEco />, text: 'Roheline ja jätkusuutlik lahendus – toetab taastuvenergia kasutust.' },
             ],
-            freqTitle: 'Sagedusturg',
-            freqText: `Sagedusturg aitab hoida elektrivõrku stabiilsena. Aku saab salvestada ülejäävat energiat ja anda seda võrku tagasi, kui on puudujääk.`,
+            freqTitle: 'Sagedusturg ja nutivõrgu integratsioon',
+            freqText: `Voltamp süsteemid on loodud sagedusturul osalemiseks, aidates stabiliseerida elektrivõrku ja teenida tulu akuressursi kasutamise kaudu.`,
         },
         lv: {
             name: 'Solis invertors + Leapton akumulators',
             details: 'Lasīt vairāk',
             km: 'PVN',
             price: '5845.5',
-            descTitle: 'Akumulatoru risinājumi ar biržas vadības moduli',
-            desc1: `Biržas vadība nozīmē automatizētu enerģijas uzglabāšanas sistēmas pārvaldību atbilstoši elektroenerģijas cenu svārstībām Nord Pool biržā.`,
-            desc2: `Sunergia piedāvā uzticamus un efektīvus akumulatoru risinājumus ar biržas vadības moduli, piemēram, SolaX un Growatt.`,
-            advantagesTitle: 'Biržas vadības priekšrocības',
+            descTitle: 'Voltamp.ee enerģijas uzglabāšanas risinājumi',
+            desc1: `Voltamp piedāvā modernus enerģijas uzglabāšanas risinājumus, piemēram, Solis invertoru un Leapton akumulatoru, kas nodrošina efektīvu enerģijas izmantošanu un neatkarību no svārstīgām elektrības cenām.`,
+            desc2: `Izvēloties Voltamp.ee komplektu, jūs iegūstat drošu un viedu sistēmu ar tirgus vadības moduli, kas optimizē uzlādi un ļauj pelnīt, pārdodot lieko enerģiju tīklam.`,
+            advantagesTitle: 'Voltamp sistēmas priekšrocības ar tirgus vadību',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Ievērojams ietaupījums – izmanto elektrību, kad tā ir lētāka.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimāla akumulatora izmantošana – maksimāla efektivitāte.' },
-                { icon: <MdTrendingUp />, text: 'Iespēja pelnīt – pārdod uzkrāto enerģiju tīklam, kad cenas ir augstas.' },
-                { icon: <MdEco />, text: 'Zaļš un ilgtspējīgs risinājums – veicina pāreju uz tīru enerģiju.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Samaziniet izmaksas, izmantojot enerģiju, kad cena ir zema.' },
+                { icon: <MdBatteryChargingFull />, text: 'Gudra uzlādes vadība pagarina akumulatora kalpošanas laiku.' },
+                { icon: <MdTrendingUp />, text: 'Iespēja pelnīt, pārdodot lieko enerģiju tīklam.' },
+                { icon: <MdEco />, text: 'Videi draudzīgs risinājums – ilgtspējīga enerģijas izmantošana.' },
             ],
-            freqTitle: 'Frekvences tirgus',
-            freqText: `Frekvences tirgus palīdz uzturēt elektroenerģijas tīkla stabilitāti un ļauj pelnīt, balansējot piedāvājumu un pieprasījumu.`,
+            freqTitle: 'Frekvences tirgus un tīkla līdzsvarošana',
+            freqText: `Voltamp risinājumi atbalsta dalību frekvences tirgū, nodrošinot stabilu elektroenerģijas padevi un papildu ienākumus no akumulatora sistēmas.`,
         },
     }[locale];
 
     return (
         <Container className="pt-[114px] max-w-[1250px] min-h-screen relative overflow-hidden">
-
-            {/* Animated gradient blobs in the background */}
             <motion.div
                 className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#00BFFF]/20 rounded-full blur-3xl"
                 animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
@@ -94,7 +92,6 @@ export default function SolisKomplekt() {
                 transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
             />
 
-            {/* Top Product Section */}
             <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -128,7 +125,6 @@ export default function SolisKomplekt() {
                 </div>
             </motion.div>
 
-            {/* Details Section */}
             <Element name="product-details">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

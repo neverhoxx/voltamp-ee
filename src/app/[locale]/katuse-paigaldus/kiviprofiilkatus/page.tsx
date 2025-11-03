@@ -1,8 +1,8 @@
 import React from "react";
 
 import KiviprofiilkatusPageHero from "@/components/shared/katuse-paigaldus/kiviprofiil/hero";
-import KiviprofiilkatusFirstBlock from "@/components/shared/katuse-paigaldus/eterniit/firstBlock";
-import KiviprofiilkatusSecondBlock from "@/components/shared/katuse-paigaldus/eterniit/secondBlock";
+import KiviprofiilkatusFirstBlock from "@/components/shared/katuse-paigaldus/kiviprofiil/firstBlock";
+import KiviprofiilkatusSecondBlock from "@/components/shared/katuse-paigaldus/kiviprofiil/secondBlock";
 
 export function generateStaticParams() {
     return [{ locale: "et" }, { locale: "en" }, { locale: "lv" }];

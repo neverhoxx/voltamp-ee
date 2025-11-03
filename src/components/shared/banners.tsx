@@ -3,6 +3,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import solaxBanner from "@/images/banners/solax-banner-15-20kwh.png";
@@ -11,17 +12,26 @@ import solisBanner2021 from "@/images/banners/solax-banner-20-21.png";
 import solisbanner1010 from "@/images/banners/solis-x-dyness-10-10-banner.png";
 import solisbanner1514 from "@/images/banners/solis-x-dyness-15-20-banner.png";
 
-const banners = [
-    { banner: solaxBanner, alt: "Solax Komplekt 15kW/20kWh", hreff: "/en/tooted/solax-inverter-solax-akupank" },
-    { banner: solisBanner1015, alt: "Solis Komplekt 10kW/15kWh", hreff: "/en/tooted/solis-leapton" },
-    { banner: solisBanner2021, alt: "Solax Komplekt 20kW/21kWh", hreff: "/en/tooted/solax-inverter-ja-solax-akupank-20-21" },
-    { banner: solisbanner1010, alt: "Solis ja Dyness 10kW/10kWh", hreff: "/en/tooted/solis-inverter-ja-dyness-akupank" },
-    { banner: solisbanner1514, alt: "Solis ja Dyness 15kW/14kWh", hreff: "/en/tooted/dyness-battery-ja-solis-hubriid" },
-];
-
 export function Banners() {
     const [currentIndex, setCurrentIndex] = React.useState(0);
-    const totalSlides = banners.length;
+    const totalSlides = 5;
+    const pathname = usePathname();
+
+    // Определяем текущую локаль по URL
+    let locale: "en" | "et" | "lv" = "en";
+    if (pathname?.startsWith("/et")) locale = "et";
+    else if (pathname?.startsWith("/lv")) locale = "lv";
+
+    // Базовые пути для каждой локали
+    const basePath = `/${locale}/tooted`;
+
+    const banners = [
+        { banner: solaxBanner, alt: "Solax Komplekt 15kW/20kWh", hreff: `${basePath}/solax-inverter-solax-akupank` },
+        { banner: solisBanner1015, alt: "Solis Komplekt 10kW/15kWh", hreff: `${basePath}/solis-leapton` },
+        { banner: solisBanner2021, alt: "Solax Komplekt 20kW/21kWh", hreff: `${basePath}/solax-inverter-ja-solax-akupank-20-21` },
+        { banner: solisbanner1010, alt: "Solis ja Dyness 10kW/10kWh", hreff: `${basePath}/solis-inverter-ja-dyness-akupank` },
+        { banner: solisbanner1514, alt: "Solis ja Dyness 15kW/14kWh", hreff: `${basePath}/dyness-battery-ja-solis-hubriid` },
+    ];
 
     React.useEffect(() => {
         const interval = setInterval(() => {
@@ -60,6 +70,7 @@ export function Banners() {
                 ))}
             </div>
 
+            {/* Кнопки навигации */}
             <button
                 onClick={goToPrevious}
                 className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition"
@@ -74,12 +85,15 @@ export function Banners() {
                 <ChevronRight className="w-5 h-5 text-gray-800" />
             </button>
 
+            {/* Индикаторы */}
             <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
                 {banners.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex ? "bg-gray-800" : "bg-gray-400/60"
+                        className={`w-2.5 h-2.5 rounded-full transition-all ${index === currentIndex
+                            ? "bg-gray-800"
+                            : "bg-gray-400/60"
                             }`}
                     />
                 ))}

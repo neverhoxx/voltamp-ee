@@ -16,7 +16,7 @@ import {
 import ProductImage from "@/images/Akulahendus_koju_Sunergia_landing_webp-1536x1026.webp";
 import solisbanner1514 from "@/images/banners/solis-x-dyness-15-20-banner.png";
 
-export default function SolisKomplekt() {
+export default function VoltampSolisKomplekt() {
     const pathname = usePathname();
     let locale: 'en' | 'et' | 'lv' = 'en';
     if (pathname?.startsWith('/et')) locale = 'et';
@@ -25,63 +25,64 @@ export default function SolisKomplekt() {
     const t = {
         en: {
             name: 'Dyness Battery + Solis Hybrid',
-            details: 'Read more',
+            details: 'Discover more',
             km: 'VAT',
             price: '6618.7',
-            descTitle: 'Battery Solutions with Market Control Module',
-            desc1: `Market control means automated management of the energy storage system according to electricity price fluctuations on the Nord Pool exchange.`,
-            desc2: `Sunergia offers reliable and efficient battery solutions with market control modules such as SolaX and Growatt.`,
-            advantagesTitle: 'Advantages of Market Control',
+            descTitle: 'Voltamp Smart Energy System',
+            desc1: `The Dyness + Solis hybrid solution by Voltamp brings intelligent energy management directly to your home. Designed for those who value efficiency, autonomy, and smart savings.`,
+            desc2: `Our hybrid system automatically stores energy when prices are low and releases it when electricity is expensive – maximizing your comfort and minimizing your costs.`,
+            advantagesTitle: 'Why choose Voltamp?',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Significant electricity cost savings – use energy when prices are low.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimal battery usage – ensures your system operates efficiently.' },
-                { icon: <MdTrendingUp />, text: 'Earning potential – sell stored energy back to the grid.' },
-                { icon: <MdEco />, text: 'Green and sustainable – supports renewable energy transition.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Save money daily — use electricity when it’s cheapest thanks to smart automation.' },
+                { icon: <MdBatteryChargingFull />, text: 'High-performance Dyness battery ensures reliable backup and long lifespan.' },
+                { icon: <MdTrendingUp />, text: 'Turn energy into profit — sell surplus back to the grid effortlessly.' },
+                { icon: <MdEco />, text: 'Eco-conscious technology — support the green transition and reduce CO₂ footprint.' },
             ],
-            freqTitle: 'Frequency Market',
-            freqText: `The frequency market helps maintain grid stability. Connected battery systems can earn revenue by balancing supply and demand.`,
+            freqTitle: 'Smart Energy Balance',
+            freqText: `Voltamp systems connect to the frequency market, helping stabilize the grid and rewarding you for participating in the balance of supply and demand.`,
         },
         et: {
-            name: 'Dyness Battery + Solis hübriid',
-            details: 'Loe edasi',
+            name: 'Dyness aku + Solis hübriid',
+            details: 'Avasta rohkem',
             km: 'KM',
             price: '6618.7',
-            descTitle: 'Akulahendused börsijuhtimismooduliga',
-            desc1: `Börsijuhtimine tähendab energiasalvestussüsteemi automatiseeritud haldamist vastavalt elektrihinna kõikumisele Nord Pooli elektribörsil.`,
-            desc2: `Sunergia tootevalikust leiad töökindlad ja efektiivsed akulahendused börsijuhtimismooduliga nagu SolaX ja Growatt.`,
-            advantagesTitle: 'Börsijuhtimise eelised',
+            descTitle: 'Voltamp nutikas energialahendus',
+            desc1: `Voltampi Dyness + Solis hübriidlahendus toob sinu koju tõhusa ja intelligentse energiasalvestuse. Ideaalne valik neile, kes soovivad kontrollida oma energiakulusid ja suurendada iseseisvust.`,
+            desc2: `Süsteem salvestab energiat siis, kui hind on madal, ning kasutab seda, kui elekter on kallim – tagades mugavuse ja maksimaalse säästu automaatselt.`,
+            advantagesTitle: 'Miks valida Voltamp?',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Märkimisväärne elektrikulude kokkuhoid – kasuta elektrit siis, kui hind on madal.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimaalne aku kasutamine – tagab süsteemi maksimaalse efektiivsuse.' },
-                { icon: <MdTrendingUp />, text: 'Tulu teenimise võimalus – müü võrku energiat, kui elektrihind on kõrge.' },
-                { icon: <MdEco />, text: 'Roheline ja jätkusuutlik lahendus – vähendab elektrivõrgu koormust.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Igapäevane kokkuhoid – kasuta elektrit siis, kui see on odavaim.' },
+                { icon: <MdBatteryChargingFull />, text: 'Dyness aku tagab töökindla jõudluse ja pika eluea.' },
+                { icon: <MdTrendingUp />, text: 'Tieni lisatulu – müü ülejääv energia võrku ilma pingutuseta.' },
+                { icon: <MdEco />, text: 'Roheline tehnoloogia – aita vähendada CO₂ jalajälge ja toeta taastuvenergiat.' },
             ],
-            freqTitle: 'Sagedusturg',
-            freqText: `Sagedusturg aitab hoida elektrivõrku stabiilsena. Aku saab salvestada ülejäävat energiat ja anda seda võrku tagasi, kui on puudujääk.`,
+            freqTitle: 'Tark energiabilanss',
+            freqText: `Voltampi süsteemid saavad liituda sagedusturuga, aidates stabiliseerida elektrivõrku ja teenides lisatulu energiavoogude tasakaalustamisel.`,
         },
         lv: {
             name: 'Dyness akumulators + Solis hibrīds',
-            details: 'Lasīt vairāk',
+            details: 'Uzzināt vairāk',
             km: 'PVN',
             price: '6618.7',
-            descTitle: 'Akumulatoru risinājumi ar biržas vadības moduli',
-            desc1: `Biržas vadība nozīmē automatizētu enerģijas uzglabāšanas sistēmas pārvaldību atbilstoši elektroenerģijas cenu svārstībām Nord Pool biržā.`,
-            desc2: `Sunergia piedāvā uzticamus un efektīvus akumulatoru risinājumus ar biržas vadības moduli, piemēram, SolaX un Growatt.`,
-            advantagesTitle: 'Biržas vadības priekšrocības',
+            descTitle: 'Voltamp gudrā enerģijas sistēma',
+            desc1: `Voltamp Dyness + Solis risinājums ir gudra un efektīva enerģijas uzglabāšanas sistēma tiem, kas vēlas maksimālu neatkarību un ekonomiju.`,
+            desc2: `Sistēma automātiski uzkrāj enerģiju, kad tā ir lētāka, un izmanto to, kad cenas kāpj – pilnībā automatizēta enerģijas pārvaldība jūsu mājās.`,
+            advantagesTitle: 'Kāpēc izvēlēties Voltamp?',
             advantages: [
-                { icon: <MdEnergySavingsLeaf />, text: 'Ievērojams ietaupījums – izmanto elektrību, kad tā ir lētāka.' },
-                { icon: <MdBatteryChargingFull />, text: 'Optimāla akumulatora izmantošana – maksimāla efektivitāte.' },
-                { icon: <MdTrendingUp />, text: 'Iespēja pelnīt – pārdod uzkrāto enerģiju tīklam, kad cenas ir augstas.' },
-                { icon: <MdEco />, text: 'Zaļš un ilgtspējīgs risinājums – veicina pāreju uz tīru enerģiju.' },
+                { icon: <MdEnergySavingsLeaf />, text: 'Ietaupiet katru dienu – izmantojiet elektrību, kad tā ir vislētākā.' },
+                { icon: <MdBatteryChargingFull />, text: 'Dyness akumulators nodrošina drošu un ilgstošu darbību.' },
+                { icon: <MdTrendingUp />, text: 'Pelniet, pārdodot pārpalikušo enerģiju atpakaļ tīklā.' },
+                { icon: <MdEco />, text: 'Videi draudzīga tehnoloģija – samaziniet CO₂ pēdu un atbalstiet zaļo enerģiju.' },
             ],
-            freqTitle: 'Frekvences tirgus',
-            freqText: `Frekvences tirgus palīdz uzturēt elektroenerģijas tīkla stabilitāti un ļauj pelnīt, balansējot piedāvājumu un pieprasījumu.`,
+            freqTitle: 'Gudrais līdzsvars',
+            freqText: `Voltamp sistēmas piedalās frekvences tirgū, stabilizējot tīklu un nodrošinot ienākumus par līdzsvarošanu starp piedāvājumu un pieprasījumu.`,
         },
     }[locale];
 
     return (
         <Container className="pt-[114px] max-w-[1250px] min-h-screen relative overflow-hidden">
 
+            {/* Background animation */}
             <motion.div
                 className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#00BFFF]/20 rounded-full blur-3xl"
                 animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
@@ -93,6 +94,7 @@ export default function SolisKomplekt() {
                 transition={{ repeat: Infinity, duration: 12, ease: "easeInOut" }}
             />
 
+            {/* Hero section */}
             <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -126,6 +128,7 @@ export default function SolisKomplekt() {
                 </div>
             </motion.div>
 
+            {/* Details section */}
             <Element name="product-details">
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}

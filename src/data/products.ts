@@ -80,6 +80,13 @@ import fourteenth_product_3_pic from "@/images/products/dyness/dyness-sbdu100-3.
 import lisa_fourteenth_product_1_pic from "@/images/products/dyness/001.1656.png";
 import lisa_fourteenth_product_2_pic from "@/images/products/dyness/25361588.png";
 
+import fifteenth_product_1_pic from "@/images/products/dyness/dyness-stack100-1.avif";
+import fifteenth_product_2_pic from "@/images/products/dyness/dyness-stack100-2.avif";
+import fifteenth_product_3_pic from "@/images/products/dyness/dyness-stack100-3.avif";
+
+import lisa_fifteenth_product_1_pic from "@/images/products/dyness/25361528.png";
+import lisa_fifteenth_product_2_pic from "@/images/products/dyness/25361530.png";
+
 
 import et from "@/locales/products-list/et.json";
 import en from "@/locales/products-list/en.json";
@@ -1046,15 +1053,14 @@ export function getProducts(locale: Locale): Product[] {
                 [t("stringideÜhendusedMPPTSisendiKohta")]: "1",
                 [t("kaal")]: "31.7 kg"
             },
-
             põhinäitajad: {
-                [t("mõõdud")]: "655 x 455 x 295 mm",
-                [t("maht")]: "87.917 l",
-                [t("kaal")]: "23 kg",
+                [t("mõõdud")]: "700 x 600 x 340 mm",
+                [t("maht")]: "142.8 l",
+                [t("kaal")]: "41 kg",
                 [t("ühik")]: "tk",
-                [t("pakendiSuurused")]: "1",
+                [t("pakendiSuurused")]: "1 / 6",
                 [t("kogusPakendis")]: "–",
-                [t("kaubamärk")]: "DYNESS"
+                [t("kaubamärk")]: "SOLIS"
             },
             seotuddokumendid: {
                 joonised: {
@@ -1115,17 +1121,81 @@ export function getProducts(locale: Locale): Product[] {
             },
 
             põhinäitajad: {
-                [t("mõõdud")]: "700 x 600 x 340 mm",
-                [t("maht")]: "142.8 l",
-                [t("kaal")]: "41 kg",
+                [t("mõõdud")]: "655 x 455 x 295 mm",
+                [t("maht")]: "87.917 l",
+                [t("kaal")]: "23 kg",
                 [t("ühik")]: "tk",
-                [t("pakendiSuurused")]: "1 / 6",
+                [t("pakendiSuurused")]: "1",
                 [t("kogusPakendis")]: "–",
-                [t("kaubamärk")]: "SOLIS"
+                [t("kaubamärk")]: "DYNESS"
             },
             seotuddokumendid: {
                 joonised: {
                     lisa_pildid: [lisa_fourteenth_product_1_pic, lisa_fourteenth_product_2_pic]
+                },
+                dokumentatsioon: {
+                    files: [
+                        {
+                            name: t("KasutusPaigaldusjuhend"),
+                            url: "https://voltamp.ee/docs/25769904.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/25769902.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/25769905.pdf"
+                        }
+                    ]
+                }
+            }
+        },
+
+        {
+            id: 15,
+            name: "DYNESS STACK100 5.12 kWh (aku moodul)",
+            slug: "dyness-stack100",
+            price: 960,
+            type: "Akusüsteemid",
+            category: "akusüsteemid",
+            brand: "Dyness",
+            subtype: t("akumoodul"),
+            logo: dynessLogo,
+            main_image: fifteenth_product_1_pic,
+            images: [
+                fifteenth_product_1_pic,
+                fifteenth_product_2_pic,
+                fifteenth_product_3_pic
+            ],
+            km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
+
+            localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
+            localePõhinäitajad: [t("localePõhinäitajad")],
+            localeSeotuddokumendid: [t("localeSeotuddokumendid")],
+            localeJoonised: [t("localeJoonised")],
+            localeDokumentatsioon: [t("localeDokumentatsioon")],
+            tooteAndmed: [t("tooteAndmed")],
+
+            tehnilisedNäitajad: {
+                [t("tooteTehnilisedNäitajadPuuduvad")]: ""
+            },
+
+            põhinäitajad: {
+                [t("mõõdud")]: "730 x 470 x 205 mm",
+                [t("maht")]: "70.336 l",
+                [t("kaal")]: "48 kg",
+                [t("ühik")]: "tk",
+                [t("pakendiSuurused")]: "1",
+                [t("kogusPakendis")]: "–",
+                [t("kaubamärk")]: "DYNESS"
+            },
+            seotuddokumendid: {
+                joonised: {
+                    lisa_pildid: [lisa_fifteenth_product_1_pic, lisa_fifteenth_product_2_pic]
                 },
                 dokumentatsioon: {
                     files: [

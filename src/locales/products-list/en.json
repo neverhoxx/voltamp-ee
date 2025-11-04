@@ -74,5 +74,12 @@
     "wlan": "WLAN",
     "lisa": "Add to cart",
     "näitar": "Show more",
-    "näitav": "Show less"
+    "näitav": "Show less",
+    "maxlühisvoolMPPTkohta": "Max. short-circuit current per MPPT",
+    "maksimaalneKasutegur": "Maximum efficiency",
+    "trafoga": "With transformer",
+    "vahelduvvooluÜhendus": "AC connection",
+    "kruviühendus": "Screw connection",
+    "alalisvooluühendus": "DC connection",
+    "konnektor": "Connector (male)"
 }

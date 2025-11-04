@@ -1,6 +1,8 @@
 import solaxLogo from "@/images/logos/solax-logo.webp";
-import huaweiLogo from "@/images/logos/huaweilogo.png";
+import huaweiLogo from "@/images/logos/huawei.png";
 import tigoLogo from "@/images/logos/tigologo.png";
+import solisLogo from "@/images/logos/solis.webp";
+import dynessLogo from "@/images/logos/dyness.avif";
 import first_product_front from "@/images/products/solax/X3-ULTRA 15-30kW front.webp";
 import lisa_pilt_first_product_left from "@/images/products/solax/X3-ULTRA 15-30kW left.webp";
 import lisa_pilt_first_product_right from "@/images/products/solax/X3-ULTRA 15-30kW right.webp";
@@ -59,6 +61,25 @@ import eleventh_product_2_pic from "@/images/products/tigo/PV OPTIMEERIJA TIGO V
 
 import twelfth_product_1_pic from "@/images/products/tigo/PV OPTIMEERIJA TIGO TAP VASTUVÕTJA pilt1.avif";
 import twelfth_product_2_pic from "@/images/products/tigo/PV OPTIMEERIJA TIGO TAP VASTUVÕTJA pilt2.avif";
+
+import thirdtenth_product_1_pic from "@/images/products/solis/hybrid-inverter-solis-1.avif";
+import thirdtenth_product_2_pic from "@/images/products/solis/hybrid-inverter-solis-2.avif";
+import thirdtenth_product_3_pic from "@/images/products/solis/hybrid-inverter-solis-3.avif";
+import thirdtenth_product_4_pic from "@/images/products/solis/hybrid-inverter-solis-4.avif";
+import thirdtenth_product_5_pic from "@/images/products/solis/hybrid-inverter-solis-5.avif";
+
+import lisa_thirdtenth_product_1_pic from "@/images/products/solis/hybrid-inverter-solis-1.png";
+import lisa_thirdtenth_product_2_pic from "@/images/products/solis/hybrid-inverter-solis-2.png";
+import lisa_thirdtenth_product_3_pic from "@/images/products/solis/hybrid-inverter-solis-3.png";
+import lisa_thirdtenth_product_4_pic from "@/images/products/solis/hybrid-inverter-solis-4.png";
+
+import fourteenth_product_1_pic from "@/images/products/dyness/dyness-sbdu100-1.avif";
+import fourteenth_product_2_pic from "@/images/products/dyness/dyness-sbdu100-2.avif";
+import fourteenth_product_3_pic from "@/images/products/dyness/dyness-sbdu100-3.avif";
+
+import lisa_fourteenth_product_1_pic from "@/images/products/dyness/001.1656.png";
+import lisa_fourteenth_product_2_pic from "@/images/products/dyness/25361588.png";
+
 
 import et from "@/locales/products-list/et.json";
 import en from "@/locales/products-list/en.json";
@@ -960,6 +981,165 @@ export function getProducts(locale: Locale): Product[] {
                         {
                             name: t("TehnilineDokumentatsioon"),
                             url: "https://voltamp.ee/docs/tigo_tap_tehniline.pdf"
+                        }
+                    ]
+                }
+            }
+        },
+
+        {
+            id: 13,
+            name: "Solis S6 Hübriidinverter EH3P15K-H",
+            slug: "solis-s6-hybriidinverter-eh3p15k-h",
+            price: 1650,
+            category: "hübriidinverterid",
+            type: t("hübriidinverterid"),
+            brand: "Solis",
+            subtype: t("vastuvõtja"),
+            logo: solisLogo,
+            main_image: thirdtenth_product_1_pic,
+            images: [
+                thirdtenth_product_1_pic,
+                thirdtenth_product_2_pic,
+                thirdtenth_product_3_pic,
+                thirdtenth_product_4_pic,
+                thirdtenth_product_5_pic
+            ],
+            km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
+
+            localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
+            localePõhinäitajad: [t("localePõhinäitajad")],
+            localeSeotuddokumendid: [t("localeSeotuddokumendid")],
+            localeJoonised: [t("localeJoonised")],
+            localeDokumentatsioon: [t("localeDokumentatsioon")],
+            tooteAndmed: [t("tooteAndmed")],
+
+            tehnilisedNäitajad: {
+                [t("suurimDCsisendvõimsus")]: "24000 W",
+                [t("maksimaalneSisendpingeDC")]: "1000 V",
+                [t("suurimSisendvoolKuiDC")]: "80 A",
+                [t("maksimaalneSisendvoolDCMPPSeireseadmekohta")]: "20 A",
+                [t("maksimaalneSisendvoolDCStringiSisendiKohta")]: "20 A",
+                [t("pingeTüüp")]: "AC/DC",
+                [t("vahelduvvooluNimiväljundvõimsus")]: "15000 W",
+                [t("maxlühisvoolMPPTkohta")]: "30 A",
+                [t("mppJälgijateArv")]: "4",
+                [t("maksimaalneKasutegur")]: "97.7 %",
+                [t("euroopaToimivustase")]: "97.7 %",
+                [t("võrguseire")]: "Kolmefaasiline",
+                [t("trafoga")]: t("ei"),
+                [t("integreeritudAlalisvooluLüliti")]: t("jah"),
+                [t("andmelogiga")]: t("jah"),
+                [t("kuva")]: "Standardne",
+                [t("ethernet")]: t("jah"),
+                [t("juhtmevaba")]: t("ei"),
+                [t("sisseehitatudAku")]: t("ei"),
+                [t("kaitseasteIP")]: "IP66",
+                [t("alalisvooluühendus")]: t("konnektor"),
+                [t("vahelduvvooluühendus")]: t("kruviühendus"),
+                [t("stringideÜhendusedMPPTSisendiKohta")]: "2",
+                [t("sobibVälistingimustessePaigaldamiseks")]: t("jah"),
+                [t("sobibVarutoitegaKasutamiseks")]: t("jah"),
+                [t("stringideÜhendusedMPPTSisendiKohta")]: "1",
+                [t("kaal")]: "31.7 kg"
+            },
+
+            põhinäitajad: {
+                [t("mõõdud")]: "655 x 455 x 295 mm",
+                [t("maht")]: "87.917 l",
+                [t("kaal")]: "23 kg",
+                [t("ühik")]: "tk",
+                [t("pakendiSuurused")]: "1",
+                [t("kogusPakendis")]: "–",
+                [t("kaubamärk")]: "DYNESS"
+            },
+            seotuddokumendid: {
+                joonised: {
+                    lisa_pildid: [lisa_thirdtenth_product_1_pic, lisa_thirdtenth_product_2_pic, lisa_thirdtenth_product_3_pic, lisa_thirdtenth_product_4_pic]
+                },
+                dokumentatsioon: {
+                    files: [
+                        {
+                            name: t("KasutusPaigaldusjuhend"),
+                            url: "https://voltamp.ee/docs/solis%20S6%20H%C3%BCbriidinverter%20EH3P15K-H-k.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/Solis%20S6%20H%C3%BCbriidinverter%20EH3P15K-H-2.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/solis%20S6%20H%C3%BCbriidinverter%20EH3P15K-H.pdf"
+                        }
+                    ]
+                }
+            }
+        },
+
+        {
+            id: 14,
+            name: "DYNESS SBDU100 + ALUS (kontrollmoodul)",
+            slug: "dyness-sbdu100",
+            price: 780,
+            type: "Kontrollmoodul",
+            category: "akusüsteemid",
+            brand: "Dyness",
+            subtype: t("kontrollmoodul"),
+            logo: dynessLogo,
+            main_image: fourteenth_product_1_pic,
+            images: [
+                fourteenth_product_1_pic,
+                fourteenth_product_2_pic,
+                fourteenth_product_3_pic
+            ],
+            km: t("km"),
+            lisa: t("lisa"),
+            naitar: t("näitar"),
+            naitav: t("näitav"),
+
+            localeTehnilisednäitajad: [t("localeTehnilisednäitajad")],
+            localePõhinäitajad: [t("localePõhinäitajad")],
+            localeSeotuddokumendid: [t("localeSeotuddokumendid")],
+            localeJoonised: [t("localeJoonised")],
+            localeDokumentatsioon: [t("localeDokumentatsioon")],
+            tooteAndmed: [t("tooteAndmed")],
+
+            tehnilisedNäitajad: {
+
+
+
+                [t("tooteTehnilisedNäitajadPuuduvad")]: ""
+            },
+
+            põhinäitajad: {
+                [t("mõõdud")]: "700 x 600 x 340 mm",
+                [t("maht")]: "142.8 l",
+                [t("kaal")]: "41 kg",
+                [t("ühik")]: "tk",
+                [t("pakendiSuurused")]: "1 / 6",
+                [t("kogusPakendis")]: "–",
+                [t("kaubamärk")]: "SOLIS"
+            },
+            seotuddokumendid: {
+                joonised: {
+                    lisa_pildid: [lisa_fourteenth_product_1_pic, lisa_fourteenth_product_2_pic]
+                },
+                dokumentatsioon: {
+                    files: [
+                        {
+                            name: t("KasutusPaigaldusjuhend"),
+                            url: "https://voltamp.ee/docs/25769904.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/25769902.pdf"
+                        },
+                        {
+                            name: t("TootelehtBrošüür"),
+                            url: "https://voltamp.ee/docs/25769905.pdf"
                         }
                     ]
                 }

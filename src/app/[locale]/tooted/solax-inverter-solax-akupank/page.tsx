@@ -57,7 +57,7 @@ export default function SolisKomplekt() {
                 { icon: <MdEco />, text: 'Roheline ja jätkusuutlik – Voltamp aitab vähendada CO₂ jalajälge ja toetab roheenergiat.' },
             ],
             freqTitle: 'Tark börsijuhtimine',
-            freqText: `Voltamp Solax süsteemid on valmis automaatseks börsi- ja sagedusjuhtimiseks, mis võimaldab akul laadida või tühjeneda vastavalt Nord Pooli hinnasignaalidele – maksimeerides kasu ja efektiivsust.`,
+            freqText: `Voltampi pakutavad Solax süsteemid on valmis automaatseks börsi- ja sagedusjuhtimiseks, mis võimaldab akul laadida või tühjeneda vastavalt Nord Pooli hinnale – maksimeerides kasumit ja efektiivsust.`,
         },
         lv: {
             name: 'Solax invertors + Solax akumulators',

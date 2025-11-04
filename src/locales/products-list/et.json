@@ -74,5 +74,12 @@
     "wlan": "WLAN",
     "lisa": "Lisa ostukorvi",
     "näitar": "Näita rohkem",
-    "näitav": "Näita vähem"
+    "näitav": "Näita vähem",
+    "maxlühisvoolMPPTkohta": "Max. lühisvool MPPT kohta",
+    "maksimaalneKasutegur": "Maksimaalne kasutegur",
+    "trafoga": "Trafoga",
+    "vahelduvvooluÜhendus": "Vahelduvvoolu ühendus",
+    "kruviühendus": "Kruviühendus",
+    "alalisvooluühendus": "Alalisvooluühendus",
+    "konnektor": "Konnektor (isas-)"
 }

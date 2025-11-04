@@ -74,5 +74,12 @@
     "wlan": "WLAN",
     "lisa": "Pievienot grozam",
     "näitar": "Rādīt vairāk",
-    "näitav": "Rādīt mazāk"
+    "näitav": "Rādīt mazāk",
+    "maxlühisvoolMPPTkohta": "Maks. īsslēguma strāva uz vienu MPPT",
+    "maksimaalneKasutegur": "Maksimālā efektivitāte",
+    "trafoga": "Ar transformatoru",
+    "vahelduvvooluÜhendus": "AC savienojums",
+    "kruviühendus": "Skrūvju savienojums",
+    "alalisvooluühendus": "DC savienojums",
+    "konnektor": "Savienotājs (vīriešu)"
 }

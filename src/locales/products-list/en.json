@@ -81,5 +81,12 @@
     "vahelduvvooluÜhendus": "AC connection",
     "kruviühendus": "Screw connection",
     "alalisvooluühendus": "DC connection",
-    "konnektor": "Connector (male)"
+    "konnektor": "Connector (male)",
+    "akumoodul": "Battery module",
+    "lisaseade": "Additional device",
+    "võrgusisend": "Grid input",
+    "kontroller": "Controller",
+    "optimeerija": "Optimizer",
+    "võrguseade": "Grid device",
+    "vastuvõtja": "Receiver"
 }

@@ -81,5 +81,12 @@
     "vahelduvvooluÜhendus": "AC savienojums",
     "kruviühendus": "Skrūvju savienojums",
     "alalisvooluühendus": "DC savienojums",
-    "konnektor": "Savienotājs (vīriešu)"
+    "konnektor": "Savienotājs (vīriešu)",
+    "akumoodul": "Akumulatora modulis",
+    "lisaseade": "Papildu ierīce",
+    "võrgusisend": "Tīkla ievade",
+    "kontroller": "Kontrolieris",
+    "optimeerija": "Optimizētājs",
+    "võrguseade": "Tīkla ierīce",
+    "vastuvõtja": "Uztvērējs"
 }

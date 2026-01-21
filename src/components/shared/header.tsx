@@ -16,6 +16,11 @@ import en from '@/locales/header/en.json';
 import lv from '@/locales/header/lv.json';
 import et from '@/locales/header/et.json';
 
+import CartDrawer from './cart-drawer';
+import { useCart } from "@/context/CartContext";
+
+import { FiMessageSquare, FiShoppingCart } from "react-icons/fi";
+
 type LocaleDict = Record<string, string>;
 
 const locales: Record<string, LocaleDict> = { en, lv, et };
@@ -44,8 +49,14 @@ export default function Header({ locale }: HeaderProps) {
     const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
     const [isMegaFixed, setIsMegaFixed] = useState(false);
 
+    const { cart } = useCart();
+
+    const totalQuantity = cart.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+    );
+
     const highlightPaths = [
-        "/et/tooted", "/lv/tooted", "/en/tooted",
         "/et/kasulikku/pildigalerii/viljandimaa", "/lv/kasulikku/pildigalerii/viljandimaa", "/en/kasulikku/pildigalerii/viljandimaa",
         "/et/meist/partnerid", "/lv/meist/partnerid", "/en/meist/partnerid",
         "/et/kasulikku/pildigalerii/autovarjualune", "/lv/kasulikku/pildigalerii/autovarjualune", "/en/kasulikku/pildigalerii/autovarjualune",
@@ -152,11 +163,11 @@ export default function Header({ locale }: HeaderProps) {
             >
 
                 <Container className="flex justify-between items-center relative">
-                    <Link href={`/${currentLocale}`} className="h-10 w-[150px] cursor-pointer">
+                    <Link href={`/${currentLocale}`} className="max-h-10 w-[120px] cursor-pointer">
                         <Image className="h-10 w-[150px]" src={logo} alt="Voltamp - Logo" />
                     </Link>
 
-                    <nav className="hidden sm:block flex-1 px-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <nav className="header-adaptive-n-l flex-1 px-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                         <ul className="flex gap-6 text-base font-medium justify-end ">
                             {['tooted', 'kasulikku', 'meist', 'teenused'].map(menu => (
                                 <li key={menu}>
@@ -164,7 +175,7 @@ export default function Header({ locale }: HeaderProps) {
                                         aria-expanded={activeMegaMenu === menu}
                                         aria-controls={`mega-menu-${menu}`}
                                         onClick={() => toggleMegaMenu(menu)}
-                                        className={`transition-colors duration-500 hover:text-[#FFAC12] cursor-pointer ${isHighlighted
+                                        className={`transition-colors duration-500 hover:text-[#00BFFF] cursor-pointer ${isHighlighted
                                             ? 'text-black'
                                             : isSolid && activeMegaMenu
                                                 ? 'text-black'
@@ -183,7 +194,7 @@ export default function Header({ locale }: HeaderProps) {
                             <li>
                                 <Link
                                     href={`/${currentLocale}/integreeritav-paikesekatus/taiskatuse-susteem`}
-                                    className={`transition-colors duration-500 hover:text-[#FFAC12] cursor-pointer ${isHighlighted
+                                    className={`transition-colors duration-500 hover:text-[#00BFFF] cursor-pointer ${isHighlighted
                                         ? 'text-black'
                                         : isSolid && activeMegaMenu
                                             ? 'text-black'
@@ -201,37 +212,50 @@ export default function Header({ locale }: HeaderProps) {
 
                     </nav>
 
-                    <div className="hidden xl:flex flex-1/40 justify-end text-white">
-                        <Link href={`/${currentLocale}/kontakt`} className="px-[30px] py-3 bg-[#00BFFF] text-black rounded-tr-[18px] cursor-pointer transition-all duration-500 ease-in-out hover:rounded-tr-[0px] flex items-center">
-                            {t[`küsi`]}
+                    <div className="header-adaptive-btn flex flex-1/40 justify-end ">
+                        <Link href={`/${currentLocale}/kontakt`} className="bg-[rgba(0,0,0,0.5)] text-white p-4 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-full flex items-center h-[56px] min-w-[56px] justify-center header-btn-h header-btn-h-adaptive">
+                            <span className='header-btn-span'>{t[`küsi`]}</span>
 
-                            <HiArrowNarrowRight className="ml-[10px] text-[#000]" />
+                            <FiMessageSquare className='text-2xl hover:text-[#00BFFF] header-btn-adaptive-span' />
                         </Link>
-
                     </div>
 
-                    <div className="flex gap-4 ml-2">
-                        {availableLocales.map(loc => {
-                            const switchHref = pathname.startsWith(`/${currentLocale}/`)
-                                ? `/${loc}/${cleanPathname}`
-                                : `/${loc}`;
-                            return (
-                                <Link
-                                    key={loc}
-                                    href={switchHref}
-                                    className={`uppercase font-semibold ${loc === currentLocale
-                                        ? `underline ${isOpen || isSolid || isHighlighted ? 'text-black' : 'text-white'}`
-                                        : `${isOpen || isSolid ? 'text-black hover:opacity-70' : 'text-white hover:opacity-70'} ${isHighlighted ? '!text-black' : ''}`
-                                        }`}
 
-                                >
-                                    {loc}
-                                </Link>
-                            );
-                        })}
+
+                    <div className="ml-2">
+                        <Link
+                            href={
+                                (() => {
+                                    const currentIndex = availableLocales.indexOf(currentLocale);
+                                    const nextIndex = (currentIndex + 1) % availableLocales.length;
+                                    const nextLocale = availableLocales[nextIndex];
+                                    return pathname.startsWith(`/${currentLocale}/`)
+                                        ? `/${nextLocale}/${cleanPathname}`
+                                        : `/${nextLocale}`;
+                                })()
+                            }
+                            className="bg-[rgba(0,0,0,0.5)] h-[56px] w-[56px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer header-btn-h-adaptive"
+                        >
+                            <span className="uppercase hover:text-[#00BFFF] text-white text-2xl font-semibold header-btn-adaptive-span">
+                                {currentLocale}
+                            </span>
+                        </Link>
                     </div>
 
-                    <div className="header-nav-menu-btn" onClick={openMenu}>
+                    <CartDrawer locale={locale}>
+                        <button className="ml-2 bg-[rgba(0,0,0,0.5)] h-[56px] w-[56px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-full flex items-center justify-center cursor-pointer header-btn-h-adaptive">
+                            <FiShoppingCart className="hover:text-[#00BFFF] text-white text-2xl font-semibold header-btn-adaptive-span" />
+
+                            {totalQuantity > 0 && (
+                                <div className="absolute top-[-5px] right-[-5px] w-5 h-5 flex justify-center items-center bg-[#00BFFF] font-bold text-white rounded-full text-[14px]">
+                                    {totalQuantity}
+                                </div>
+                            )}
+                        </button>
+                    </CartDrawer>
+
+
+                    <div className="header-nav-menu-btn bg-[rgba(0,0,0,0.5)] h-[56px] w-[56px] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm rounded-full" onClick={openMenu}>
                         <div className={`menu-btn ${isOpen ? "active" : isSolid || isHighlighted ? 'black' : ""}`} />
                     </div>
 

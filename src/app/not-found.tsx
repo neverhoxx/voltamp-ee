@@ -5,7 +5,6 @@ export default function NotFoundPage() {
     return (
         <div className="flex items-center justify-center h-screen bg-gradient-to-b from-gray-900 to-black select-none">
             <div className="text-center px-6">
-                {/* Неоновая цифра 404 */}
                 <h1
                     className="text-[9rem] font-bold drop-shadow-[0_0_25px_#00BFFF]"
                     style={{
@@ -21,7 +20,6 @@ export default function NotFoundPage() {
                     Lost in the Grid
                 </h2>
 
-                {/* Подзаголовок */}
                 <p className="mt-3 text-gray-400 text-lg max-w-lg mx-auto">
                     The page you are looking for is not connected to the circuit.<br />
                     Maybe the solar panels are offline ☀️🔋

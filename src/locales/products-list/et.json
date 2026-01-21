@@ -1,6 +1,6 @@
 {
     "hübriidinverterid": "Hübriidinverter",
-    "kontrollmoodul": "kontrollmoodul",
+    "kontrollmoodul": "Kontrollmoodul",
     "suurimDCsisendvõimsus": "Suurim DC sisendvõimsus",
     "maksimaalneSisendpingeDC": "Maksimaalne sisendpinge DC",
     "suurimSisendvoolKuiDC": "Suurim sisendvool, kui DC",
@@ -81,5 +81,12 @@
     "vahelduvvooluÜhendus": "Vahelduvvoolu ühendus",
     "kruviühendus": "Kruviühendus",
     "alalisvooluühendus": "Alalisvooluühendus",
-    "konnektor": "Konnektor (isas-)"
+    "konnektor": "Konnektor (isas-)",
+    "akumoodul": "Akumoodul",
+    "lisaseade": "Lisaseade",
+    "võrgusisend": "Võrgusisend",
+    "kontroller": "Kontroller",
+    "optimeerija": "Optimeerija",
+    "võrguseade": "Võrguseade",
+    "vastuvõtja": "Vastuvõtja"
 }

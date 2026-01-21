@@ -74,7 +74,6 @@ const nextConfig: NextConfig = {
 
   compress: true,
   reactStrictMode: true,
-  swcMinify: true,
   trailingSlash: false,
 
   experimental: {

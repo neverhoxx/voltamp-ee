@@ -364,7 +364,7 @@ html {
   }
 
   .product-link .product-btn{
-    opacity: 1;
+    opacity: 100%;
     visibility: visible;
   }
 

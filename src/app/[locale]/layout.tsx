@@ -1,27 +1,25 @@
-import { ReactNode } from 'react';
+import React from "react";
 
 import Header from "@/components/shared/header";
-import KontaktBlock from '@/components/shared/kontakt';
+import KontaktBlock from "@/components/shared/kontakt";
+import Faq from "@/components/shared/faq";
+import Bipv from "@/components/shared/bipv";
+import Footer from "@/components/shared/footer";
 
-import Faq from '@/components/shared/faq';
-import Bipv from '@/components/shared/bipv';
+type Props = {
+    children: React.ReactNode;
+    params: {
+        locale: string;
+    };
+};
 
-import Footer from '@/components/shared/footer';
-import React from 'react';
-
-export default async function LocaleLayout({ children, params }: { children: React.ReactNode, params: { locale: string }; }) {
+export default function LocaleLayout({ children, params }: Props) {
     const { locale } = params;
-
-    const childrenArray = React.Children.toArray(children);
-    const hasMarker = childrenArray.some(
-        (child: any) => child?.props?.["data-hide-kontakt"] !== undefined
-    );
 
     return (
         <>
-
             <Header locale={locale} />
-            <main className='main'>
+            <main className="main">
                 {children}
                 <Faq params={{ locale }} />
                 <Bipv params={{ locale }} />
@@ -31,4 +29,3 @@ export default async function LocaleLayout({ children, params }: { children: Rea
         </>
     );
 }
-

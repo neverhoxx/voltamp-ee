@@ -8,13 +8,13 @@ import Footer from "@/components/shared/footer";
 
 type Props = {
     children: React.ReactNode;
-    params: {
+    params: Promise<{
         locale: string;
-    };
+    }>;
 };
 
-export default function LocaleLayout({ children, params }: Props) {
-    const { locale } = params;
+export default async function LocaleLayout({ children, params }: Props) {
+    const { locale } = await params;
 
     return (
         <>

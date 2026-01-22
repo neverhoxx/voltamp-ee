@@ -46,7 +46,7 @@ export default function PopularProducts({ params }: PopularProductsProps) {
                     </h2>
                 </div>
                 <div className="flex justify-center items-end">
-                    <Link className="flex items-center px-[15px] py-[10px] bg-black text-white rounded-tr-[18px] transition-all delay-500 ease-in-out hover:rounded-tr-0" href="/products">
+                    <Link className="flex items-center px-[15px] py-[10px] bg-black text-white rounded-tr-[18px] transition-all delay-500 ease-in-out hover:rounded-tr-0" href={`/${currentLocale}/tooted/seadmed`}>
                         {t[`vaata`]} <HiArrowNarrowRight className="ml-2.5" />
                     </Link>
                 </div>

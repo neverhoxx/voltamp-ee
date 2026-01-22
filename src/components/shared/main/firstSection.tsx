@@ -1,5 +1,6 @@
 import { Container } from "../container";
 
+import { usePathname } from "next/navigation";
 import en from '@/locales/main-first/en.json';
 import lv from '@/locales/main-first/lv.json';
 import et from '@/locales/main-first/et.json';
@@ -15,8 +16,13 @@ interface MainFirstSection {
     params: { locale: string };
 }
 
+const availableLocales = ['en', 'et', 'lv'];
+
 export default function MainFirstSection({ params }: MainFirstSection) {
     const { locale } = params;
+
+    const currentLocale = availableLocales.includes(locale) ? locale : 'et';
+
     const t = locale === 'en' ? en : locale === 'lv' ? lv : et;
 
     return (
@@ -57,7 +63,7 @@ export default function MainFirstSection({ params }: MainFirstSection) {
                     </p>
 
                     <Link
-                        href=""
+                        href={`/${currentLocale}/tooted/seadmed`}
                         className="max-w-[209px] px-10 py-[25px] rounded-tr-[18px] bg-black text-white cursor-pointer select-none
           hover:rounded-tr-0 transition-[border-radius] duration-500 flex items-center justify-center"
                     >

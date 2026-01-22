@@ -24,7 +24,6 @@ import Pet from "@/locales/seadmed/seadmedPage/et.json";
 import Plv from "@/locales/seadmed/seadmedPage/lv.json";
 
 import Image from "next/image";
-import { Link } from "lucide-react";
 
 const translations = { en, et, lv } as const;
 

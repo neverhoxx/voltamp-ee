@@ -1,6 +1,3 @@
-import { Container } from "../container";
-
-import { usePathname } from "next/navigation";
 import en from '@/locales/main-first/en.json';
 import lv from '@/locales/main-first/lv.json';
 import et from '@/locales/main-first/et.json';
